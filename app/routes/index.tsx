@@ -61,9 +61,9 @@ export default function Index() {
           </div>
         </div>
         <div className='img-container absolute  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-80 overflow-hidden'>
-          <div className='block b-1'></div>
+          {/*   <div className='block b-1'></div>
           <div className='block b-2'></div>
-          <div className='block b-3'></div>
+          <div className='block b-3'></div> */}
           <div className='block b-4'></div>
           <div className='block b-5'></div>
         </div>
