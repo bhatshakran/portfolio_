@@ -74,4 +74,7 @@
   .header {
     visibility: hidden;
   }
+  .lineSvg {
+    visibility: hidden;
+  }
 }

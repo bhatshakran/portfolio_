@@ -12,8 +12,12 @@ export default function Index() {
     didAnimate.current = true;
     const tl1 = gsap.timeline({ defaults: {} });
     tl1.set('.text-wrapper', { autoAlpha: 1, opacity: 1 });
-    tl1.set('.img-container', { autoAlpha: 1, opacity: 1, scale: 0.8 });
+    tl1.set('.img-container', { autoAlpha: 1, opacity: 1, scale: 0.7 });
     tl1.set('.header', {
+      autoAlpha: 1,
+      opacity: 1,
+    });
+    tl1.set('.lineSvg', {
       autoAlpha: 1,
       opacity: 1,
     });
@@ -36,7 +40,7 @@ export default function Index() {
     });
     tl1.to('.img-container', {
       duration: 0.6,
-      scale: 1.1,
+      scale: 1,
       y: '90%',
       ease: 'expo.easeInOut',
       delay: -0.6,
@@ -62,6 +66,23 @@ export default function Index() {
       },
       '<='
     );
+    if (document) {
+      const path = document.querySelector('path');
+      const pathLength = path?.getTotalLength();
+      if (path) {
+        path.style.strokeDasharray = pathLength + ' ' + pathLength;
+        path.style.strokeDashoffset = `${pathLength}`;
+        let remVal = Number(pathLength);
+        window.setTimeout(() => {
+          window.setInterval(() => {
+            if (remVal > 0) {
+              path.style.strokeDashoffset = `${remVal}`;
+              remVal -= 10;
+            }
+          }, 10);
+        }, 2500);
+      }
+    }
   }, []);
 
   return (
@@ -84,7 +105,7 @@ export default function Index() {
         {/* image and text here */}
         <div className='overlay'></div>
 
-        <div className='txt-container absolute   mx-auto mt-32 overflow-hidden z-10'>
+        <div className='txt-container absolute   mx-auto mt-32  z-10'>
           <div className='text-wrapper font-qaligo w-2/3  mx-auto text-5xl leading-loose text-lighPink z-10  text-center  flex gap-4 flex-wrap justify-center'>
             <div className='flex'>
               <div className='letter'>T</div>
@@ -98,7 +119,23 @@ export default function Index() {
             </div>
             <div className='flex'>
               <div className='letter'>m</div>
-              <div className='letter'>y</div>
+              <div className='letter'>
+                y
+                <svg
+                  width='170'
+                  height='212'
+                  viewBox='0 0 354 212'
+                  fill='none'
+                  className='lineSvg absolute right-0 -top-16'
+                >
+                  <path
+                    id='shape'
+                    d='M1 21.6773C101.987 25.3459 312.28 54.5847 345.555 142.191C387.149 251.699 135.579 201.476 79 155C37 120.5 4.93456 92.6649 31.3523 49.7422C57.7701 6.81948 167.376 -3.63605 222.46 9.02064'
+                    stroke='#FFCACA'
+                    strokeWidth='7'
+                  />
+                </svg>
+              </div>
             </div>
             <div className='flex'>
               <div className='letter'>p</div>
@@ -113,12 +150,10 @@ export default function Index() {
             </div>
           </div>
         </div>
-        <div className='img-container absolute  top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-80 overflow-hidden '>
+        <div className='img-container absolute  top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-80 overflow-hidden '>
           <div className='block b-1'></div>
           <div className='block b-3'></div>
           <div className='block b-2'></div>
-          {/*  <div className='block b-4'></div>
-          <div className='block b-5'></div> */}
         </div>
       </Container>
     </main>
@@ -126,19 +161,7 @@ export default function Index() {
 }
 // }
 // {
-//   /* <svg
-//                 width='170'
-//                 height='212'
-//                 viewBox='0 0 354 212'
-//                 fill='none'
-//                 className=' absolute right-0 -top-16'
-//               >
-//                 <path
-//                   d='M1 21.6773C101.987 25.3459 312.28 54.5847 345.555 142.191C387.149 251.699 135.579 201.476 79 155C37 120.5 4.93456 92.6649 31.3523 49.7422C57.7701 6.81948 167.376 -3.63605 222.46 9.02064'
-//                   stroke='#FFCACA'
-//                   strokeWidth='7'
-//                 />
-//               </svg>
+//   /*
 
 // flex flex-wrap gap-x-6 justify-center*/
 // }
