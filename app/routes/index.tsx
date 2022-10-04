@@ -50,7 +50,7 @@ export default function Index() {
       y: '-20%',
       opacity: 0,
       ease: 'power3.easeOut',
-      stagger: 0.04,
+      stagger: 0.08,
     });
 
     // header
@@ -58,11 +58,11 @@ export default function Index() {
     tl1.from(
       '.header > div',
       {
-        duration: 0.7,
+        duration: 1,
         y: '-100',
         opacity: 0,
         ease: 'power3.easeOut',
-        stagger: 0.2,
+        stagger: 0.45,
       },
       '<='
     );
