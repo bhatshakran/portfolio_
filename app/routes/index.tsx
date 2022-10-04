@@ -80,7 +80,7 @@ export default function Index() {
               remVal -= 10;
             }
           }, 10);
-        }, 2500);
+        }, 4000);
       }
     }
   }, []);
