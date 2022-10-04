@@ -42,7 +42,7 @@ export default function Index() {
       duration: 0.6,
       scale: 1,
       y: '90%',
-      ease: 'expo.easeInOut',
+      ease: 'elastic.easeIn',
       delay: -0.6,
     });
     tl1.from('.letter', {
@@ -86,10 +86,10 @@ export default function Index() {
   }, []);
 
   return (
-    <main className='home min-h-screen bg-purple  overflow-hidden relative'>
+    <main className='home min-h-screen bg-background  overflow-hidden relative'>
       <Container>
         {/* header here */}
-        <div className='header overflow-hidden text-darkPink ml-8 mt-8 flex justify-between '>
+        <div className='header overflow-hidden text-primary ml-8 mt-8 flex justify-between '>
           <div className='details font-wavenhausbold'>
             <div>
               <h4>shaqran</h4>
@@ -103,10 +103,10 @@ export default function Index() {
         </div>
 
         {/* image and text here */}
-        <div className='overlay'></div>
+        <div className='overlay bg-background'></div>
 
         <div className='txt-container absolute   mx-auto mt-32  z-10'>
-          <div className='text-wrapper font-qaligo w-2/3  mx-auto text-5xl leading-loose text-lighPink z-10  text-center  flex gap-4 flex-wrap justify-center'>
+          <div className='text-wrapper font-qaligo w-2/3  mx-auto text-3xl sm:text-5xl leading-loose text-secondary z-10  text-center  flex gap-4 sm:gap-y-16 flex-wrap justify-center'>
             <div className='flex'>
               <div className='letter'>T</div>
               <div className='letter'>h</div>
@@ -122,16 +122,13 @@ export default function Index() {
               <div className='letter'>
                 y
                 <svg
-                  width='170'
-                  height='212'
                   viewBox='0 0 354 212'
                   fill='none'
-                  className='lineSvg absolute right-0 -top-16'
+                  className='lineSvg absolute right-0 -top-8 sm:right-0 sm:-top-20 w-28 h-28 sm:w-44 sm:h-52'
                 >
                   <path
-                    id='shape'
                     d='M1 21.6773C101.987 25.3459 312.28 54.5847 345.555 142.191C387.149 251.699 135.579 201.476 79 155C37 120.5 4.93456 92.6649 31.3523 49.7422C57.7701 6.81948 167.376 -3.63605 222.46 9.02064'
-                    stroke='#FFCACA'
+                    stroke='#E94560'
                     strokeWidth='7'
                   />
                 </svg>

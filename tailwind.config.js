@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        darkPink: '#FFCACA',
-        lighPink: '#FFECEF',
-        purple: '#251b37',
+        primary: 'grey',
+        secondary: '#ffffff',
+        background: 'black',
       },
       fontFamily: {
         qaligo: ['Qaligo', 'sans-serif'],
