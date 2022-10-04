@@ -29,23 +29,23 @@ export default function Index() {
     );
 
     tl1.to('.overlay', {
-      duration: 0.7,
+      duration: 0.6,
       y: '100%',
       ease: 'expo.easeInOut',
       delay: 0,
     });
     tl1.to('.img-container', {
-      duration: 0.7,
+      duration: 0.6,
       scale: 1.1,
       y: '90%',
       ease: 'expo.easeInOut',
-      delay: -0.7,
+      delay: -0.6,
     });
     tl1.from('.letter', {
       delay: -0.5,
       y: '-20%',
       opacity: 0,
-      ease: 'elastic.easeInOut',
+      ease: 'power3.easeOut',
       stagger: 0.04,
     });
 
@@ -54,9 +54,10 @@ export default function Index() {
     tl1.from(
       '.header > div',
       {
+        duration: 0.7,
         y: '-100',
         opacity: 0,
-        ease: 'power2.easeInOut',
+        ease: 'power3.easeOut',
         stagger: 0.2,
       },
       '<='
