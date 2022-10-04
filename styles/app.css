@@ -45,7 +45,7 @@
     background-size: cover;
   }
   .b-2 {
-    background: url('/assets/ppp 2.png') 50% 50% no-repeat;
+    background: url('/assets/ppp 2.png') no-repeat;
     background-size: cover;
   }
   .b-3 {
@@ -68,6 +68,10 @@
     background: #251b37;
   }
   .text-wrapper {
-    /* visibility: hidden; */
+    visibility: hidden;
+  }
+
+  .header {
+    visibility: hidden;
   }
 }

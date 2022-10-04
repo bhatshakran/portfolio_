@@ -3,32 +3,63 @@ import Container from '~/components/Container';
 import { gsap } from 'gsap';
 
 export default function Index() {
-  const textRef = React.useRef<HTMLDivElement>(null);
+  const didAnimate = React.useRef(false);
+
   React.useEffect(() => {
-    /*  if (textRef.current) {
-      if (textRef.current?.textContent) {
-        textRef.current.innerHTML = textRef.current.textContent.replace(
-          /\S/g,
-          "<span class='letter'>$&</span>"
-        );
-      }
-    } */
-
-    const tl = gsap.timeline({
-      defaults: { duration: 2 },
+    if (didAnimate.current) {
+      return;
+    }
+    didAnimate.current = true;
+    const tl1 = gsap.timeline({ defaults: {} });
+    tl1.set('.text-wrapper', { autoAlpha: 1, opacity: 1 });
+    tl1.set('.img-container', { autoAlpha: 1, opacity: 1, scale: 0.8 });
+    tl1.set('.header', {
+      autoAlpha: 1,
+      opacity: 1,
     });
-    tl.set('.img-container', { autoAlpha: 1, opacity: 1 });
-
-    tl.from(
+    tl1.from(
       '.block',
       {
-        duration: 2,
+        duration: 1,
         y: '110%',
-        rotation: 0.001,
-        ease: 'Expo.easeInOut',
-        stagger: 0.4,
+        ease: 'expo.easeInOut',
+        stagger: 0.3,
       },
       0.4
+    );
+
+    tl1.to('.overlay', {
+      duration: 0.7,
+      y: '100%',
+      ease: 'expo.easeInOut',
+      delay: 0,
+    });
+    tl1.to('.img-container', {
+      duration: 0.7,
+      scale: 1.1,
+      y: '90%',
+      ease: 'expo.easeInOut',
+      delay: -0.7,
+    });
+    tl1.from('.letter', {
+      delay: -0.5,
+      y: '-20%',
+      opacity: 0,
+      ease: 'elastic.easeInOut',
+      stagger: 0.04,
+    });
+
+    // header
+
+    tl1.from(
+      '.header > div',
+      {
+        y: '-100',
+        opacity: 0,
+        ease: 'power2.easeInOut',
+        stagger: 0.2,
+      },
+      '<='
     );
   }, []);
 
@@ -36,7 +67,7 @@ export default function Index() {
     <main className='home min-h-screen bg-purple  overflow-hidden relative'>
       <Container>
         {/* header here */}
-        <div className='header  text-darkPink ml-8 mt-8 flex justify-between'>
+        <div className='header overflow-hidden text-darkPink ml-8 mt-8 flex justify-between '>
           <div className='details font-wavenhausbold'>
             <div>
               <h4>shaqran</h4>
@@ -52,20 +83,41 @@ export default function Index() {
         {/* image and text here */}
         <div className='overlay'></div>
 
-        <div className='txt-container w-full mx-auto mt-48 overflow-hidden'>
-          <div
-            ref={textRef}
-            className='text-wrapper font-qaligo w-2/3  mx-auto text-5xl leading-loose text-lighPink z-10  text-center  '
-          >
-            This is my portfolio.
+        <div className='txt-container absolute   mx-auto mt-32 overflow-hidden z-10'>
+          <div className='text-wrapper font-qaligo w-2/3  mx-auto text-5xl leading-loose text-lighPink z-10  text-center  flex gap-4 flex-wrap justify-center'>
+            <div className='flex'>
+              <div className='letter'>T</div>
+              <div className='letter'>h</div>
+              <div className='letter'>i</div>
+              <div className='letter'>s</div>
+            </div>
+            <div className='flex'>
+              <div className='letter'>i</div>
+              <div className='letter'>s</div>
+            </div>
+            <div className='flex'>
+              <div className='letter'>m</div>
+              <div className='letter'>y</div>
+            </div>
+            <div className='flex'>
+              <div className='letter'>p</div>
+              <div className='letter'>o</div>
+              <div className='letter'>r</div>
+              <div className='letter'>t</div>
+              <div className='letter'>f</div>
+              <div className='letter'>o</div>
+              <div className='letter'>l</div>
+              <div className='letter'>i</div>
+              <div className='letter'>o.</div>
+            </div>
           </div>
         </div>
-        <div className='img-container absolute  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-80 overflow-hidden'>
-          {/*   <div className='block b-1'></div>
+        <div className='img-container absolute  top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-80 overflow-hidden '>
+          <div className='block b-1'></div>
+          <div className='block b-3'></div>
           <div className='block b-2'></div>
-          <div className='block b-3'></div> */}
-          <div className='block b-4'></div>
-          <div className='block b-5'></div>
+          {/*  <div className='block b-4'></div>
+          <div className='block b-5'></div> */}
         </div>
       </Container>
     </main>
