@@ -41,7 +41,7 @@
   }
 
   .b-1 {
-    background: url('/assets/compressjpeg/ppp 1-min.jpeg') 50% 50% no-repeat;
+    background: #251b37;
     background-size: cover;
   }
   .b-2 {
@@ -49,15 +49,15 @@
     background-size: cover;
   }
   .b-3 {
-    background: url('/assets/compressjpeg/ppp 3-min.jpeg') 50% 50% no-repeat;
+    background: #372948;
     background-size: cover;
   }
   .b-4 {
-    background: url('/assets/compressjpeg/ppp 4-min.jpeg') 50% 50% no-repeat;
+    background: #ffcaca;
     background-size: cover;
   }
   .b-5 {
-    background: url('/assets/compressjpeg/ppp 5-min.jpeg') 50% 50% no-repeat;
+    background: #ffecef;
     background-size: cover;
   }
   .overlay {

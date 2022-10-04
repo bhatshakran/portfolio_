@@ -680,18 +680,6 @@ video {
   width: 66.666667%;
 }
 
-.w-96 {
-  width: 24rem;
-}
-
-.w-80 {
-  width: 20rem;
-}
-
-.w-72 {
-  width: 18rem;
-}
-
 .w-64 {
   width: 16rem;
 }
@@ -775,10 +763,6 @@ video {
   color: rgb(255 236 239 / var(--tw-text-opacity));
 }
 
-.ease-in {
-  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-}
-
 .img-container {
   visibility: hidden;
 }
@@ -790,7 +774,7 @@ video {
 }
 
 .b-1 {
-  background: url('/assets/compressjpeg/ppp 1-min.jpeg') 50% 50% no-repeat;
+  background: #251b37;
   background-size: cover;
 }
 
@@ -800,17 +784,17 @@ video {
 }
 
 .b-3 {
-  background: url('/assets/compressjpeg/ppp 3-min.jpeg') 50% 50% no-repeat;
+  background: #372948;
   background-size: cover;
 }
 
 .b-4 {
-  background: url('/assets/compressjpeg/ppp 4-min.jpeg') 50% 50% no-repeat;
+  background: #ffcaca;
   background-size: cover;
 }
 
 .b-5 {
-  background: url('/assets/compressjpeg/ppp 5-min.jpeg') 50% 50% no-repeat;
+  background: #ffecef;
   background-size: cover;
 }
 
