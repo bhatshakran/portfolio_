@@ -24,7 +24,7 @@ export default function Index() {
     tl1.from(
       '.block',
       {
-        duration: 1,
+        duration: 0.7,
         y: '110%',
         ease: 'expo.easeInOut',
         stagger: 0.3,
@@ -47,10 +47,10 @@ export default function Index() {
     });
     tl1.from('.letter', {
       delay: -0.5,
-      y: '-20%',
+      y: '-50%',
       opacity: 0,
-      ease: 'power3.easeOut',
-      stagger: 0.08,
+      ease: 'none',
+      stagger: 0.05,
     });
 
     // header
@@ -58,11 +58,12 @@ export default function Index() {
     tl1.from(
       '.header > div',
       {
+        delay: 0.5,
         duration: 1,
         y: '-100',
         opacity: 0,
         ease: 'power3.easeOut',
-        stagger: 0.45,
+        stagger: 0.2,
       },
       '<='
     );
@@ -106,7 +107,7 @@ export default function Index() {
         <div className='overlay bg-background'></div>
 
         <div className='txt-container absolute   mx-auto mt-32  z-10'>
-          <div className='text-wrapper font-qaligo w-2/3  mx-auto text-3xl sm:text-5xl leading-loose text-secondary z-10  text-center  flex gap-4 sm:gap-y-16 flex-wrap justify-center'>
+          <div className='text-wrapper font-qaligo w-2/3  mx-auto text-3xl sm:text-5xl leading-loose text-secondary z-10 pt-4 sm:py-8  text-center  flex gap-4 sm:gap-y-16 flex-wrap justify-center overflow-hidden'>
             <div className='flex'>
               <div className='letter'>T</div>
               <div className='letter'>h</div>
