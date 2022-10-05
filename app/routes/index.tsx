@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 
 export default function Index() {
   const didAnimate = React.useRef(false);
+  const [showMenu, setShowMenu] = React.useState(false);
 
   React.useEffect(() => {
     if (didAnimate.current) {
@@ -13,14 +14,8 @@ export default function Index() {
     const tl1 = gsap.timeline({ defaults: {} });
     tl1.set('.text-wrapper', { autoAlpha: 1, opacity: 1 });
     tl1.set('.img-container', { autoAlpha: 1, opacity: 1, scale: 0.7 });
-    tl1.set('.header', {
-      autoAlpha: 1,
-      opacity: 1,
-    });
-    tl1.set('.lineSvg', {
-      autoAlpha: 1,
-      opacity: 1,
-    });
+    tl1.set('.header', { autoAlpha: 1, opacity: 1 });
+    tl1.set('.lineSvg', { autoAlpha: 1, opacity: 1 });
     tl1.from(
       '.block',
       {
@@ -51,22 +46,26 @@ export default function Index() {
     tl1.from(
       '.header > div',
       {
-        duration: 0.7,
+        duration: 0.8,
         y: '-100',
         opacity: 0,
-        ease: 'power3.easeOut',
-        stagger: 0.2,
+        ease: 'power3',
+        stagger: 0.3,
       },
       '<='
     );
+
+    // text animatio
 
     tl1.from('.letter', {
       delay: -0.5,
       y: '-50%',
       opacity: 0,
-      ease: 'none',
+      ease: 'power2.easeInOut',
       stagger: 0.05,
     });
+
+    // svg custom animation
 
     if (document) {
       const path = document.querySelector('path');
@@ -79,13 +78,63 @@ export default function Index() {
           window.setInterval(() => {
             if (remVal > 0) {
               path.style.strokeDashoffset = `${remVal}`;
-              remVal -= 10;
+              remVal -= 15;
             }
           }, 10);
         }, 4000);
       }
     }
   }, []);
+
+  React.useEffect(() => {
+    if (showMenu) {
+      const tl = gsap.timeline();
+      tl.set('.fullscreen-menu', { autoAlpha: 1, opacity: 1 });
+
+      tl.from('.left-pane', {
+        opacity: 0,
+        y: '100%',
+        duration: 1,
+        ease: 'expo.easeInOut',
+      });
+      tl.from(
+        '.right-pane',
+        {
+          opacity: 0,
+          y: '-100%',
+          duration: 1,
+          ease: 'expo.easeInOut',
+        },
+        '+<0.1'
+      );
+
+      tl.from(
+        '.left-pane > ul',
+        {
+          scale: 0.5,
+          duration: 1,
+          y: '100%',
+          opacity: 0,
+          ease: 'expo.easeInOut',
+        },
+        '+<=0.5'
+      );
+      tl.from(
+        '.right-pane > ul',
+        {
+          scale: 0.5,
+          duration: 1.1,
+          y: '-100%',
+          ease: 'expo.easeInOut',
+        },
+        '<=0.9'
+      );
+    }
+  }, [showMenu]);
+
+  const displayMenu = () => {
+    setShowMenu(!showMenu);
+  };
 
   return (
     <main className='home min-h-screen bg-background  overflow-hidden relative'>
@@ -101,7 +150,14 @@ export default function Index() {
               <h4>kashmir, india</h4>
             </div>
           </div>
-          <div className='site-menu mr-10 font-wavenhausbold'>menu</div>
+          <div className='site-menu mr-10 font-wavenhausbold'>
+            <button
+              onClick={displayMenu}
+              className='hover:text-white hover:line-through '
+            >
+              menu
+            </button>
+          </div>
         </div>
 
         {/* image and text here */}
@@ -157,6 +213,32 @@ export default function Index() {
           <div className='block b-2'></div>
         </div>
       </Container>
+      {showMenu && (
+        <div className='fullscreen-menu bg-black h-screen w-screen absolute top-0 left-0 z-20 flex '>
+          <div className='left-pane bg-pink-100 w-1/2 h-full flex items-center'>
+            <ul className='flex flex-col items-center w-full text-3xl gap-y-24 font-qaligo'>
+              <li>home</li>
+              <li>projects</li>
+              <li>about</li>
+              <li>blog</li>
+            </ul>
+          </div>
+          <div className='right-pane bg-secondary w-1/2 h-full flex items-center'>
+            <ul className='flex flex-col items-center w-full text-3xl gap-y-24 font-qaligo'>
+              <li>github</li>
+              <li>twitter</li>
+              <li>instagram</li>
+            </ul>
+          </div>
+
+          <div
+            className='close absolute top-4 right-8 z-30 text-3xl cursor-pointer'
+            onClick={displayMenu}
+          >
+            x
+          </div>
+        </div>
+      )}
     </main>
   );
 }
