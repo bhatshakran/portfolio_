@@ -55,7 +55,7 @@ export default function Index() {
       '<='
     );
 
-    // text animatio
+    // text animation
 
     tl1.from('.letter', {
       delay: -0.5,
@@ -168,6 +168,7 @@ export default function Index() {
       {
         scale: 1.1,
         opacity: 0.1,
+        webkitFilter: 'blur(' + 10 + 'px)',
         delay: -0.5,
         // ease: 'expo.easeIn',
       }
