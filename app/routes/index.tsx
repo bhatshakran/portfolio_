@@ -45,6 +45,21 @@ export default function Index() {
       ease: 'elastic.easeIn',
       delay: -0.6,
     });
+
+    // header
+
+    tl1.from(
+      '.header > div',
+      {
+        duration: 0.7,
+        y: '-100',
+        opacity: 0,
+        ease: 'power3.easeOut',
+        stagger: 0.2,
+      },
+      '<='
+    );
+
     tl1.from('.letter', {
       delay: -0.5,
       y: '-50%',
@@ -53,20 +68,6 @@ export default function Index() {
       stagger: 0.05,
     });
 
-    // header
-
-    tl1.from(
-      '.header > div',
-      {
-        delay: 0.5,
-        duration: 1,
-        y: '-100',
-        opacity: 0,
-        ease: 'power3.easeOut',
-        stagger: 0.2,
-      },
-      '<='
-    );
     if (document) {
       const path = document.querySelector('path');
       const pathLength = path?.getTotalLength();
