@@ -87,8 +87,8 @@ export default function Index() {
   }, []);
 
   React.useEffect(() => {
+    const tl = gsap.timeline();
     if (showMenu) {
-      const tl = gsap.timeline();
       tl.set('.fullscreen-menu', { autoAlpha: 1, opacity: 1 });
 
       tl.from('.left-pane', {
@@ -105,7 +105,7 @@ export default function Index() {
           duration: 1,
           ease: 'expo.easeInOut',
         },
-        '+<0.1'
+        '<='
       );
 
       tl.from(
@@ -127,13 +127,51 @@ export default function Index() {
           y: '-100%',
           ease: 'expo.easeInOut',
         },
-        '<=0.9'
+        '<=0.3'
       );
     }
   }, [showMenu]);
 
   const displayMenu = () => {
-    setShowMenu(!showMenu);
+    setShowMenu(true);
+  };
+
+  const closeMenu = () => {
+    const tl = gsap.timeline();
+    tl.to('.left-pane', {
+      opacity: 0,
+      y: '200%',
+      duration: 1,
+      ease: 'expo.easeInOut',
+    });
+    tl.to(
+      '.right-pane',
+      {
+        opacity: 0,
+        y: '-200%',
+        duration: 1,
+        ease: 'expo.easeInOut',
+      },
+      '<='
+    );
+
+    setTimeout(() => {
+      setShowMenu(false);
+    }, 500);
+
+    tl.from(
+      [
+        '.home > div > .header',
+        '.home > div > .img-container',
+        '.home > div > .txt-container',
+      ],
+      {
+        scale: 1.1,
+        opacity: 0.1,
+        delay: -0.5,
+        // ease: 'expo.easeIn',
+      }
+    );
   };
 
   return (
@@ -214,8 +252,8 @@ export default function Index() {
         </div>
       </Container>
       {showMenu && (
-        <div className='fullscreen-menu bg-black h-screen w-screen absolute top-0 left-0 z-20 flex '>
-          <div className='left-pane bg-pink-100 w-1/2 h-full flex items-center'>
+        <div className='fullscreen-menu bg-black h-screen w-screen absolute top-0 left-0 z-20 flex flex-wrap'>
+          <div className='left-pane  bg-secondary w-1/2 h-full flex items-center'>
             <ul className='flex flex-col items-center w-full text-3xl gap-y-24 font-qaligo'>
               <li>home</li>
               <li>projects</li>
@@ -223,7 +261,7 @@ export default function Index() {
               <li>blog</li>
             </ul>
           </div>
-          <div className='right-pane bg-secondary w-1/2 h-full flex items-center'>
+          <div className='right-pane bg-pink-100 w-1/2 h-full flex items-center'>
             <ul className='flex flex-col items-center w-full text-3xl gap-y-24 font-qaligo'>
               <li>github</li>
               <li>twitter</li>
@@ -233,7 +271,7 @@ export default function Index() {
 
           <div
             className='close absolute top-4 right-8 z-30 text-3xl cursor-pointer'
-            onClick={displayMenu}
+            onClick={closeMenu}
           >
             x
           </div>
