@@ -40,25 +40,10 @@
     @apply absolute w-full h-full;
   }
 
-  .b-1 {
-    background: #251b37;
+  .main-image {
+    background: url('/assets/ppp 2.jpeg') 50% 50% no-repeat;
     background-size: cover;
-  }
-  .b-2 {
-    background: url('/assets/ppp 2.png') no-repeat;
-    background-size: cover;
-  }
-  .b-3 {
-    background: #372948;
-    background-size: cover;
-  }
-  .b-4 {
-    background: #ffcaca;
-    background-size: cover;
-  }
-  .b-5 {
-    background: #ffecef;
-    background-size: cover;
+    visibility: hidden;
   }
   .overlay {
     position: absolute;
@@ -66,18 +51,16 @@
     height: 50vh;
     bottom: -10rem;
   }
-  .text-wrapper {
+  .text-wrapper,
+  .header,
+  .lineSvg,
+  .fullscreen-menu,
+  .scroll {
     visibility: hidden;
   }
-
-  .header {
-    visibility: hidden;
-  }
-  .lineSvg {
-    visibility: hidden;
-  }
-
-  .fullscreen-menu {
-    visibility: hidden;
+  .scroll {
+    color: transparent;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: white;
   }
 }
