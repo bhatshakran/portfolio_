@@ -13,8 +13,7 @@ export default function Index() {
     didAnimate.current = true;
 
     let mm = gsap.matchMedia(),
-      breakPoint = 640;
-
+      breakPoint = 450;
     mm.add(
       {
         isDesktop: `(min-width: ${breakPoint}px) and (prefers-reduced-motion: no-preference)`,
@@ -128,6 +127,18 @@ export default function Index() {
           stagger: 0.05,
         });
 
+        tl1.from(
+          '.scroll',
+          {
+            autoAlpha: 0,
+            opacity: 0,
+            ease: 'expo.easeInOut',
+            duration: 0.3,
+            delay: 1,
+          },
+          '<='
+        );
+
         return () => {};
       }
     );
@@ -151,18 +162,6 @@ export default function Index() {
         }, 4000);
       }
     }
-
-    /* tl1.from(
-      '.scroll',
-      {
-        autoAlpha: 0,
-        opacity: 0,
-        ease: 'expo.easeInOut',
-        duration: 0.3,
-        delay: 1,
-      },
-      '<='
-    ); */
   }, []);
 
   React.useEffect(() => {
@@ -609,7 +608,7 @@ export default function Index() {
         </div>
         <div className=' main-image w-80 h-80 absolute  top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 '></div>
 
-        <div className='scroll  text-3xl absolute bottom-0 left-1/2 -translate-x-1/2 font-wavenhaussemibold  '>
+        <div className='scroll  text-3xl absolute bottom-20 sm:bottom-0 left-1/2 -translate-x-1/2 font-wavenhaussemibold  '>
           {' '}
           ↓scroll
         </div>
