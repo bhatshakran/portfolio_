@@ -11,93 +11,126 @@ export default function Index() {
       return;
     }
     didAnimate.current = true;
-    const tl1 = gsap.timeline({
-      defaults: { duration: 1, ease: 'elastic.easeIn' },
-    });
 
-    tl1.set('.b-2', { opacity: 0 });
-    tl1.set('.text-wrapper', { autoAlpha: 1, opacity: 1 });
-    tl1.set('.img-container', { autoAlpha: 1, opacity: 1, scale: 0.7 });
-    tl1.set('.header', { autoAlpha: 1, opacity: 1 });
-    tl1.set('.lineSvg', { autoAlpha: 1, opacity: 1 });
-    tl1.set('.b-1', {
-      color: 'transparent',
-      webkitTextStrokeWidth: '1px',
-      webkitTextStrokeColor: 'white',
-    });
+    let mm = gsap.matchMedia(),
+      breakPoint = 640;
 
-    tl1.to('.b-1', {
-      delay: 0.3,
-      y: 0,
-      x: -100,
-      opacity: 1,
-    });
-    tl1.fromTo(
-      '.b-2',
-      { x: -100, opacity: 0 },
-      { x: 100, opacity: 1, ease: 'power2.easeInOut' },
-      '<='
-    );
-
-    tl1.to('.block', {
-      delay: 0.5,
-      x: '200%',
-      duration: 1,
-      autoAlpha: 0,
-      ease: 'expo.easeInOut',
-    });
-    tl1.fromTo(
-      '.main-image',
+    mm.add(
       {
-        autoAlpha: 1,
-        opacity: 0,
-        rotateY: 90,
-        scale: 0.6,
-        x: '-100%',
-        ease: 'power3.easeInOut',
+        isDesktop: `(min-width: ${breakPoint}px) and (prefers-reduced-motion: no-preference)`,
+        isMobile: `(max-width: ${
+          breakPoint - 1
+        }px) and (prefers-reduced-motion: no-preference)`,
       },
-      { scale: 0.6, opacity: 1, rotateY: 0, x: 0 },
-      '<='
+      (context) => {
+        let { isDesktop, isMobile } = context.conditions,
+          tl1 = gsap.timeline({
+            defaults: { duration: 1, ease: 'elastic.easeIn' },
+          });
+
+        tl1.set('.b-2', { opacity: 0 });
+        tl1.set('.text-wrapper', { autoAlpha: 1, opacity: 1 });
+        tl1.set('.img-container', { autoAlpha: 1, opacity: 1, scale: 0.7 });
+        tl1.set('.header', { autoAlpha: 1, opacity: 1 });
+        tl1.set('.lineSvg', { autoAlpha: 1, opacity: 1 });
+        tl1.set('.b-1', {
+          color: 'transparent',
+          webkitTextStrokeWidth: '1px',
+          webkitTextStrokeColor: 'white',
+        });
+
+        tl1.fromTo(
+          '.b-1',
+          {
+            opacity: 0,
+            x: 30,
+          },
+          {
+            y: 0,
+            x: isDesktop ? 10 : -20,
+            opacity: 1,
+          }
+        );
+        tl1.fromTo(
+          '.b-2',
+          { x: isDesktop ? -80 : -50, opacity: 0 },
+          { x: isDesktop ? 30 : -10, opacity: 1, ease: 'power2.easeInOut' },
+          '<='
+        );
+
+        tl1.to('.b-1', {
+          delay: 0.5,
+          x: '300%',
+          duration: 1,
+          opacity: 0,
+          ease: 'expo.easeInOut',
+        });
+        tl1.to(
+          '.b-2',
+          {
+            x: '100%',
+            duration: 0.7,
+            opacity: 0,
+            ease: 'expo.easeInOut',
+          },
+          '<='
+        );
+        tl1.fromTo(
+          '.main-image',
+          {
+            autoAlpha: 1,
+            opacity: 0,
+            rotateY: 90,
+            scale: 0.6,
+            x: '-100%',
+            ease: 'power3.easeInOut',
+          },
+          { scale: 0.6, opacity: 1, rotateY: 0, x: 0 },
+          '<='
+        );
+
+        tl1.to('.overlay', {
+          duration: 0.6,
+          y: '100%',
+          ease: 'expo.easeInOut',
+          delay: 0,
+        });
+        tl1.to('.main-image', {
+          duration: 0.6,
+          scaleX: isDesktop ? 1.4 : 0.6,
+          scaleY: isDesktop ? 1 : 0.6,
+          y: isDesktop ? '100%' : '45%',
+          ease: 'elastic.easeIn',
+          delay: -0.6,
+        });
+
+        // header
+
+        tl1.from(
+          '.header > div',
+          {
+            duration: 0.8,
+            y: '-100',
+            opacity: 0,
+            ease: 'power3',
+            stagger: 0.3,
+          },
+          '<='
+        );
+
+        // text animation
+
+        tl1.from('.letter', {
+          delay: -0.5,
+          y: '-50%',
+          opacity: 0,
+          ease: 'power2.easeInOut',
+          stagger: 0.05,
+        });
+
+        return () => {};
+      }
     );
-
-    tl1.to('.overlay', {
-      duration: 0.6,
-      y: '100%',
-      ease: 'expo.easeInOut',
-      delay: 0,
-    });
-    tl1.to('.main-image', {
-      duration: 0.6,
-      scaleX: 1.4,
-      scaleY: 1,
-      y: '100%',
-      ease: 'elastic.easeIn',
-      delay: -0.6,
-    });
-
-    // header
-
-    tl1.from(
-      '.header > div',
-      {
-        duration: 0.8,
-        y: '-100',
-        opacity: 0,
-        ease: 'power3',
-        stagger: 0.3,
-      },
-      '<='
-    );
-
-    // text animation
-
-    tl1.from('.letter', {
-      delay: -0.5,
-      y: '-50%',
-      opacity: 0,
-      ease: 'power2.easeInOut',
-      stagger: 0.05,
-    });
 
     // svg custom animation
 
@@ -119,7 +152,7 @@ export default function Index() {
       }
     }
 
-    tl1.from(
+    /* tl1.from(
       '.scroll',
       {
         autoAlpha: 0,
@@ -129,7 +162,7 @@ export default function Index() {
         delay: 1,
       },
       '<='
-    );
+    ); */
   }, []);
 
   React.useEffect(() => {
@@ -210,6 +243,7 @@ export default function Index() {
         '.home > div > .header',
         '.home > div > .img-container',
         '.home > div > .txt-container',
+        '.main-image',
       ],
       {
         scale: 1.1,
@@ -230,7 +264,7 @@ export default function Index() {
             <div>
               <h4>shaqran</h4>
             </div>
-            <div className='ml-10 mt-3 font-wavenhaussemibold'>
+            <div className='hidden sm:flex sm:flex-col ml-10 mt-3 font-wavenhaussemibold'>
               <h4>web developer</h4>
               <h4>kashmir, india</h4>
             </div>
@@ -248,8 +282,8 @@ export default function Index() {
         {/* image and text here */}
         <div className='overlay bg-background'></div>
 
-        <div className='txt-container absolute  mx-auto mt-32  z-10'>
-          <div className='text-wrapper font-qaligo w-2/3  mx-auto text-3xl sm:text-5xl leading-loose text-secondary  z-10 pt-4 sm:py-8  text-center  flex gap-4 sm:gap-y-16 flex-wrap justify-center overflow-hidden'>
+        <div className=' txt-container absolute  left-1/2 top-32 sm:top-16 -translate-x-1/2  sm:mt-32  z-10'>
+          <div className='text-wrapper font-qaligo w-full  mx-auto text-xl sm:text-5xl leading-loose text-secondary   z-10 pt-4 sm:py-8  text-center flex gap-4 sm:gap-y-16 flex-wrap justify-center '>
             <div className='flex '>
               <div className='letter'>T</div>
               <div className='letter'>h</div>
@@ -267,7 +301,7 @@ export default function Index() {
                 <svg
                   viewBox='0 0 354 212'
                   fill='none'
-                  className='lineSvg absolute right-0 -top-8 sm:right-0 sm:-top-20 w-28 h-28 sm:w-44 sm:h-52'
+                  className='lineSvg absolute right-0 -top-8 sm:right-0 sm:-top-20 w-20 h-24 sm:w-44 sm:h-52'
                 >
                   <path
                     d='M1 21.6773C101.987 25.3459 312.28 54.5847 345.555 142.191C387.149 251.699 135.579 201.476 79 155C37 120.5 4.93456 92.6649 31.3523 49.7422C57.7701 6.81948 167.376 -3.63605 222.46 9.02064'
@@ -290,13 +324,12 @@ export default function Index() {
             </div>
           </div>
         </div>
-        <div className=' img-container absolute  top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-80  text-white text-7xl font-wavenhausbold flex items-center justify-center'>
-          <div className='block b-1'>Hello,</div>
-          <div className='block b-2'>
-            Welcome.
+        <div className=' img-container absolute  top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2  w-2/3 h-80 ml-3 sm:ml-none text-white text-4xl sm:text-7xl font-wavenhausbold flex items-center justify-center  gap-0 '>
+          <div className='blocks b-1 text-center'>Hello,</div>
+          <div className='blocks b-2 text-center '>
+            <p>Welcome.</p>
             <svg
-              width={250}
-              height={150}
+              className=' hidden sm:block sm:w-60 sm:h-36'
               id='f56f4e6a-2eb6-442c-8a66-115b7fea9368'
               data-name='Layer 1'
               viewBox='0 0 500.22 297.09'
@@ -583,17 +616,17 @@ export default function Index() {
       </Container>
 
       {showMenu && (
-        <div className='fullscreen-menu bg-black h-screen w-screen absolute top-0 left-0 z-20 flex flex-wrap'>
-          <div className='left-pane  bg-secondary w-1/2 h-full flex items-center'>
-            <ul className='flex flex-col items-center w-full text-3xl gap-y-24 font-qaligo'>
+        <div className='fullscreen-menu bg-black h-screen w-screen absolute top-0 left-0 z-20 flex flex-wrap '>
+          <div className='left-pane  bg-secondary w-full sm:w-1/2 h-1/2 sm:h-full flex items-center'>
+            <ul className='flex flex-col items-center w-full text-lg sm:text-3xl gap-y-4 sm:gap-y-24 font-qaligo'>
               <li>home</li>
               <li>projects</li>
               <li>about</li>
               <li>blog</li>
             </ul>
           </div>
-          <div className='right-pane bg-pink-100 w-1/2 h-full flex items-center'>
-            <ul className='flex flex-col items-center w-full text-3xl gap-y-24 font-qaligo'>
+          <div className='right-pane bg-pink-100 w-full sm:w-1/2 h-1/2 sm:h-full flex items-center'>
+            <ul className='flex flex-col items-center w-full text-lg sm:text-3xl gap-y-4 sm:gap-y-24 font-qaligo'>
               <li>github</li>
               <li>twitter</li>
               <li>instagram</li>
