@@ -414,7 +414,10 @@ video {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* background: #251b37; */
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 *, ::before, ::after {
@@ -558,6 +561,40 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 470px) {
+  .container {
+    max-width: 470px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .debug-screens::before {
   position: fixed;
   z-index: 2147483647;
@@ -576,6 +613,30 @@ video {
 @media (min-width: 470px) {
   .debug-screens::before {
     content: 'screen: sm';
+  }
+}
+
+@media (min-width: 768px) {
+  .debug-screens::before {
+    content: 'screen: md';
+  }
+}
+
+@media (min-width: 1024px) {
+  .debug-screens::before {
+    content: 'screen: lg';
+  }
+}
+
+@media (min-width: 1280px) {
+  .debug-screens::before {
+    content: 'screen: xl';
+  }
+}
+
+@media (min-width: 1536px) {
+  .debug-screens::before {
+    content: 'screen: 2xl';
   }
 }
 
@@ -607,8 +668,8 @@ video {
   top: 33.333333%;
 }
 
-.bottom-0 {
-  bottom: 0px;
+.bottom-20 {
+  bottom: 5rem;
 }
 
 .top-0 {
@@ -625,10 +686,6 @@ video {
 
 .right-8 {
   right: 2rem;
-}
-
-.bottom-20 {
-  bottom: 5rem;
 }
 
 .z-10 {
@@ -680,6 +737,12 @@ video {
   display: none;
 }
 
+.h-fit {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .h-24 {
   height: 6rem;
 }
@@ -694,10 +757,6 @@ video {
 
 .h-1\/2 {
   height: 50%;
-}
-
-.min-h-screen {
-  min-height: 100vh;
 }
 
 .w-full {
@@ -799,8 +858,32 @@ video {
   background-color: rgb(252 231 243 / var(--tw-bg-opacity));
 }
 
+.bg-purple-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 213 255 / var(--tw-bg-opacity));
+}
+
+.bg-yellow-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 240 138 / var(--tw-bg-opacity));
+}
+
+.bg-green-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(187 247 208 / var(--tw-bg-opacity));
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pt-20 {
+  padding-top: 5rem;
 }
 
 .text-center {
@@ -839,6 +922,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 .leading-loose {
   line-height: 2;
 }
@@ -856,6 +944,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .blur {
@@ -878,6 +971,11 @@ video {
   width: 100%;
   height: 50vh;
   bottom: -10rem;
+}
+
+.element {
+  height: 100vh;
+  width: 100%;
 }
 
 .text-wrapper,
@@ -944,8 +1042,8 @@ video {
     right: 0px;
   }
 
-  .sm\:-top-20 {
-    top: -5rem;
+  .sm\:-top-16 {
+    top: -4rem;
   }
 
   .sm\:bottom-0 {
@@ -960,44 +1058,24 @@ video {
     display: block;
   }
 
-  .sm\:flex {
-    display: flex;
-  }
-
-  .sm\:h-52 {
-    height: 13rem;
+  .sm\:h-44 {
+    height: 11rem;
   }
 
   .sm\:h-36 {
     height: 9rem;
   }
 
-  .sm\:h-full {
-    height: 100%;
-  }
-
-  .sm\:w-44 {
-    width: 11rem;
+  .sm\:w-32 {
+    width: 8rem;
   }
 
   .sm\:w-60 {
     width: 15rem;
   }
 
-  .sm\:w-1\/2 {
-    width: 50%;
-  }
-
-  .sm\:flex-col {
-    flex-direction: column;
-  }
-
   .sm\:gap-y-16 {
     row-gap: 4rem;
-  }
-
-  .sm\:gap-y-24 {
-    row-gap: 6rem;
   }
 
   .sm\:py-8 {
@@ -1005,9 +1083,9 @@ video {
     padding-bottom: 2rem;
   }
 
-  .sm\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .sm\:text-7xl {
@@ -1015,14 +1093,53 @@ video {
     line-height: 1;
   }
 
-  .sm\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
   .sm\:block {
     position: absolute;
     height: 100%;
     width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:-top-20 {
+    top: -5rem;
+  }
+
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:h-52 {
+    height: 13rem;
+  }
+
+  .md\:h-full {
+    height: 100%;
+  }
+
+  .md\:w-44 {
+    width: 11rem;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
+  .md\:flex-col {
+    flex-direction: column;
+  }
+
+  .md\:gap-y-24 {
+    row-gap: 6rem;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
