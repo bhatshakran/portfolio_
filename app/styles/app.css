@@ -797,6 +797,10 @@ video {
   cursor: pointer;
 }
 
+.resize {
+  resize: both;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -973,9 +977,14 @@ video {
   bottom: -10rem;
 }
 
+.animation-wrapper {
+  width: 100vw;
+}
+
 .element {
   height: 100vh;
   width: 100%;
+  background-size: cover;
 }
 
 .text-wrapper,

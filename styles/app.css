@@ -53,10 +53,13 @@
     height: 50vh;
     bottom: -10rem;
   }
-
+  .animation-wrapper {
+    width: 100vw;
+  }
   .element {
     height: 100vh;
     width: 100%;
+    background-size: cover;
   }
   .text-wrapper,
   .header,

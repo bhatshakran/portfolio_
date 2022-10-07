@@ -266,12 +266,13 @@ export default function Index() {
     gsap.utils.toArray('.element').forEach((container: any, i) => {
       ScrollTrigger.create({
         trigger: container,
+        refreshPriority: 100,
         start: 'top top',
         pin: true,
         pinSpacing: false,
         snap: 1,
       });
-      /* gsap.from(container.children, {
+      gsap.from(container.children, {
         // y: 50,
         opacity: 0,
         scrollTrigger: {
@@ -280,12 +281,18 @@ export default function Index() {
           end: 'top top',
           toggleActions: 'play none reverse reset',
         },
-      }); */
+      });
+    });
+
+    window.addEventListener('resize', () => {
+      window.setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 100);
     });
   }, []);
 
   return (
-    <div className='animation-wrapper flex h-fit w-full flex-col items-center justify-center'>
+    <div className='animation-wrapper flex h-fit  flex-col items-center justify-center'>
       <div className='element bg-background  overflow-hidden relative'>
         <Container>
           {/* header here */}
