@@ -255,7 +255,6 @@ export default function Index() {
         opacity: 0.1,
         webkitFilter: 'blur(' + 10 + 'px)',
         delay: -0.5,
-        // ease: 'expo.easeIn',
       }
     );
   };
@@ -293,7 +292,7 @@ export default function Index() {
 
   return (
     <div className='animation-wrapper flex h-fit  flex-col items-center justify-center'>
-      <div className='element bg-background  overflow-hidden relative'>
+      <div className='element home bg-background  overflow-hidden relative'>
         <Container>
           {/* header here */}
           <div className='header  overflow-hidden text-primary ml-8 mt-8 flex justify-between '>
