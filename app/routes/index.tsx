@@ -2,6 +2,7 @@ import React from 'react';
 import Container from '~/components/Container';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import Projects from '~/components/Projects';
 
 export default function Index() {
   gsap.registerPlugin(ScrollTrigger);
@@ -261,26 +262,52 @@ export default function Index() {
 
   // scroll animation
   React.useEffect(() => {
-    // if()
-    gsap.utils.toArray('.element').forEach((container: any, i) => {
-      ScrollTrigger.create({
-        trigger: container,
-        refreshPriority: 100,
-        start: 'top top',
-        pin: true,
-        pinSpacing: false,
-        snap: 1,
-      });
-      gsap.from(container.children, {
-        // y: 50,
-        opacity: 0,
-        scrollTrigger: {
+    gsap.utils.toArray('.element').forEach((container: any) => {
+      if (container.classList.contains('horizontal')) {
+        const panelsContainer = container.querySelector('.panels-container');
+        const eachPanel = container.querySelector('.panel');
+
+        gsap.to(panelsContainer, {
+          x: () => {
+            return -(
+              panelsContainer.scrollWidth -
+              window.innerWidth +
+              window.innerWidth * 0.05 +
+              (window.innerWidth / 2 - eachPanel.offsetWidth / 2)
+            );
+          },
+          ease: 'none',
+          scrollTrigger: {
+            trigger: container,
+            start: () => 'center center',
+            end: () => '+=' + panelsContainer.scrollWidth,
+            scrub: true,
+            pin: true,
+            invalidateOnRefresh: true,
+            anticipatePin: 1,
+          },
+        });
+      } else {
+        ScrollTrigger.create({
+          markers: true,
           trigger: container,
-          start: 'top center',
-          end: 'top top',
-          toggleActions: 'play none reverse reset',
-        },
-      });
+          // refreshPriority: 100,
+          start: 'top top',
+          pin: true,
+          pinSpacing: false,
+          snap: 1,
+        });
+        /* gsap.from(container.children, {
+          // y: 50,
+          opacity: 0,
+          scrollTrigger: {
+            trigger: container,
+            start: 'top center',
+            end: 'top top',
+            toggleActions: 'play none reverse reset',
+          },
+        });  */
+      }
     });
 
     window.addEventListener('resize', () => {
@@ -291,8 +318,9 @@ export default function Index() {
   }, []);
 
   return (
-    <div className='animation-wrapper flex h-fit  flex-col items-center justify-center'>
-      <div className='element home bg-background  overflow-hidden relative'>
+    // <div className='animation-wrapper flex h-fit  flex-col items-center justify-center'>
+    <>
+      <div className='element  bg-background  overflow-hidden relative '>
         <Container>
           {/* header here */}
           <div className='header  overflow-hidden text-primary ml-8 mt-8 flex justify-between '>
@@ -314,10 +342,8 @@ export default function Index() {
               </button>
             </div>
           </div>
-
           {/* image and text here */}
           <div className='overlay bg-background'></div>
-
           <div className=' txt-container  absolute  left-1/2 top-32 sm:top-16 -translate-x-1/2  sm:mt-32  z-10'>
             <div className='text-wrapper font-qaligo w-full  mx-auto text-xl sm:text-4xl md:text-5xl leading-loose text-secondary   z-10 pt-4 sm:py-8  text-center flex gap-4 sm:gap-y-16 flex-wrap justify-center '>
               <div className='flex '>
@@ -644,7 +670,6 @@ export default function Index() {
             </div>
           </div>
           <div className=' main-image w-80 h-80 absolute  top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 '></div>
-
           <div className='scroll  text-3xl absolute bottom-20 sm:bottom-0 left-1/2 -translate-x-1/2 font-wavenhaussemibold  '>
             {' '}
             ↓scroll
@@ -678,22 +703,19 @@ export default function Index() {
           </div>
         )}
       </div>
-      <div className='element e-other pt-20 px-1 leading-loose bg-purple-200 text-6xl font-qaligo text-black h-screen w-full'>
+      <div className='element e-other pt-20 px-1 leading-loose bg-purple-200 text-6xl font-qaligo text-black box-border'>
         <Container>
           <div className='w-full'>some other stuff</div>
         </Container>
       </div>
-      <div className='element e-other pt-20 px-1 leading-loose bg-yellow-200 text-6xl font-qaligo text-black h-screen w-full'>
-        <Container>
-          <div className='w-full'>1234 56789 hello</div>
-        </Container>
-      </div>
-      <div className='element e-other pt-20 px-1 leading-loose bg-green-200 text-6xl font-qaligo text-black h-screen w-full'>
+      <Projects />
+      <div className=' element e-there pt-20 px-1 leading-loose bg-green-200 text-6xl font-qaligo text-black box-border'>
         <Container>
           <div className='w-full'>are you there?</div>
         </Container>
       </div>
-    </div>
+    </>
+    // </div>
   );
 }
 // }
