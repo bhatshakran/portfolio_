@@ -289,15 +289,13 @@ export default function Index() {
         });
       } else {
         ScrollTrigger.create({
-          markers: true,
           trigger: container,
-          // refreshPriority: 100,
           start: 'top top',
           pin: true,
           pinSpacing: false,
           snap: 1,
         });
-        /* gsap.from(container.children, {
+        gsap.from(container.children, {
           // y: 50,
           opacity: 0,
           scrollTrigger: {
@@ -306,7 +304,7 @@ export default function Index() {
             end: 'top top',
             toggleActions: 'play none reverse reset',
           },
-        });  */
+        });
       }
     });
 
@@ -319,7 +317,7 @@ export default function Index() {
 
   return (
     // <div className='animation-wrapper flex h-fit  flex-col items-center justify-center'>
-    <>
+    <div className='bg-background overflow-x-hidden'>
       <div className='element  bg-background  overflow-hidden relative '>
         <Container>
           {/* header here */}
@@ -714,7 +712,7 @@ export default function Index() {
           <div className='w-full'>are you there?</div>
         </Container>
       </div>
-    </>
+    </div>
     // </div>
   );
 }
