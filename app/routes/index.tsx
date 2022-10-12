@@ -3,6 +3,7 @@ import Container from '~/components/Container';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Projects from '~/components/Projects';
+import Tools from '~/components/Tools';
 
 export default function Index() {
   gsap.registerPlugin(ScrollTrigger);
@@ -279,7 +280,7 @@ export default function Index() {
           ease: 'none',
           scrollTrigger: {
             trigger: container,
-            start: () => 'center center',
+            start: () => 'left 0',
             end: () => '+=' + panelsContainer.scrollWidth,
             scrub: true,
             pin: true,
@@ -295,8 +296,7 @@ export default function Index() {
           pinSpacing: false,
           snap: 1,
         });
-        gsap.from(container.children, {
-          // y: 50,
+        /* gsap.from(container.children, {
           opacity: 0,
           scrollTrigger: {
             trigger: container,
@@ -304,7 +304,7 @@ export default function Index() {
             end: 'top top',
             toggleActions: 'play none reverse reset',
           },
-        });
+        }); */
       }
     });
 
@@ -318,7 +318,7 @@ export default function Index() {
   return (
     // <div className='animation-wrapper flex h-fit  flex-col items-center justify-center'>
     <div className='bg-background overflow-x-hidden'>
-      <div className='element  bg-background  overflow-hidden relative '>
+      <div className='element home bg-background  overflow-hidden relative '>
         <Container>
           {/* header here */}
           <div className='header  overflow-hidden text-primary ml-8 mt-8 flex justify-between '>
@@ -701,17 +701,9 @@ export default function Index() {
           </div>
         )}
       </div>
-      <div className='element e-other pt-20 px-1 leading-loose bg-purple-200 text-6xl font-qaligo text-black box-border'>
-        <Container>
-          <div className='w-full'>some other stuff</div>
-        </Container>
-      </div>
-      <Projects />
-      <div className=' element e-there pt-20 px-1 leading-loose bg-green-200 text-6xl font-qaligo text-black box-border'>
-        <Container>
-          <div className='w-full'>are you there?</div>
-        </Container>
-      </div>
+
+      {/* <Projects /> */}
+      <Tools />
     </div>
     // </div>
   );

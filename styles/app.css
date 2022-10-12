@@ -78,6 +78,9 @@
   /* .panels-container { */
   /* width: 400%; */
   /* } */
+  .horizontal {
+    visibility: hidden;
+  }
 
   .panel {
     height: 100%;
@@ -86,5 +89,47 @@
     align-items: center;
     flex-shrink: 0;
     justify-content: center;
+  }
+
+  .proj-img {
+    width: 90vh;
+    height: 70vh;
+  }
+
+  .proj-a {
+    background-image: url('/projects/a.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .proj-b {
+    background-image: url('/projects/b.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .proj-c {
+    background-image: url('/projects/c.jpeg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .proj-d {
+    background-image: url('/projects/d.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .proj-a::after,
+  .proj-b::after,
+  .proj-c::after,
+  .proj-d::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
   }
 }
