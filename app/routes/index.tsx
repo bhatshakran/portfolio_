@@ -3,13 +3,71 @@ import Container from '~/components/Container';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Projects from '~/components/Projects';
-import Tools from '~/components/Tools';
+// import Tools from '~/components/Tools';
+import Cursor from '~/components/cursor';
+import About from '~/components/About';
 
 export default function Index() {
   gsap.registerPlugin(ScrollTrigger);
 
   const didAnimate = React.useRef(false);
   const [showMenu, setShowMenu] = React.useState(false);
+
+  // cursor effect
+  React.useEffect(() => {
+    const cursor = document.querySelector('.cursor');
+    const follow = document.querySelector('.cursor-follow');
+
+    function moveCursor(e: MouseEvent) {
+      gsap.to(cursor, {
+        duration: 0.2,
+        x: e.clientX,
+        y: e.clientY,
+      });
+
+      gsap.to(follow, {
+        duration: 0.5,
+        x: e.clientX,
+        y: e.clientY,
+      });
+    }
+
+    function hoverFunc(e: MouseEvent) {
+      gsap.to(cursor, {
+        duration: 0.3,
+        opacity: 1,
+        scale: 0,
+      });
+      gsap.to(follow, {
+        duration: 0.3,
+        scale: 3,
+      });
+    }
+
+    function unhoverFunc(e: MouseEvent) {
+      gsap.to(cursor, {
+        duration: 0.3,
+        opacity: 1,
+        scale: 1,
+      });
+      gsap.to(follow, {
+        duration: 0.3,
+        scale: 1,
+      });
+    }
+
+    window.addEventListener('mousemove', moveCursor);
+
+    const link = document.querySelectorAll('a');
+    link.forEach((el) => el.addEventListener('mouseover', hoverFunc));
+    link.forEach((el) => el.addEventListener('mouseleave', unhoverFunc));
+
+    return () => {
+      window.removeEventListener('mousemove', moveCursor);
+      link.forEach((el) => el.removeEventListener('mouseenter', hoverFunc));
+      link.forEach((el) => el.removeEventListener('mouseleave', unhoverFunc));
+    };
+  }, []);
 
   // landing animation
   React.useEffect(() => {
@@ -286,6 +344,7 @@ export default function Index() {
             pin: true,
             invalidateOnRefresh: true,
             anticipatePin: 1,
+            // snap: 1 / (panelsContainer.length - 1),
           },
         });
       } else {
@@ -317,7 +376,8 @@ export default function Index() {
 
   return (
     // <div className='animation-wrapper flex h-fit  flex-col items-center justify-center'>
-    <div className='bg-background overflow-x-hidden'>
+    <div className='bg-background overflow-x-hidden cursor-none'>
+      <Cursor />
       <div className='element home bg-background  overflow-hidden relative '>
         <Container>
           {/* header here */}
@@ -702,8 +762,9 @@ export default function Index() {
         )}
       </div>
 
-      {/* <Projects /> */}
-      <Tools />
+      <Projects />
+      {/* <Tools /> */}
+      <About />
     </div>
     // </div>
   );
