@@ -761,9 +761,9 @@ export default function Index() {
         )}
       </div>
 
-      <Projects />
+      {/* <Projects /> */}
       <About />
-      <Message />
+      {/* <Message /> */}
     </div>
   );
 }

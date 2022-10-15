@@ -199,4 +199,12 @@
     height: 100%;
     opacity: 50%;
   }
+
+  /* .section-header { */
+  /* background-image: url('/assets/TED.png'); */
+  /* background-size: cover; */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  /* filter: grayscale(100%); */
+  /* } */
 }
