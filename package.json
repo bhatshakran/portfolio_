@@ -16,7 +16,9 @@
     "react": "^18.2.0",
     "react-anime": "^4.1.1",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.4.0"
+    "react-icons": "^4.4.0",
+    "react-three-fiber": "^6.0.13",
+    "three": "^0.145.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.7.1",

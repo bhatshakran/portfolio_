@@ -348,13 +348,13 @@ export default function Index() {
           },
         });
       } else {
-        ScrollTrigger.create({
+        /*  ScrollTrigger.create({
           trigger: container,
           start: 'top top',
           pin: true,
-          pinSpacing: false,
+          // pinSpacing: false,
           snap: 1,
-        });
+        }); */
         /* gsap.from(container.children, {
           opacity: 0,
           scrollTrigger: {

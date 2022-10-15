@@ -25,25 +25,30 @@ const Projects = () => {
   // project hover animation
   const hoverAnimation = (e: React.SyntheticEvent<HTMLDivElement>) => {
     // const activeEl = e.currentTarget;
-    /*  gsap.to(activeEl, {
-      // filter: 'drop-shadow(8px 8px 10px gray)',
-      scale: 0.95,
-      opacity: 0.8,
-    }) */
+    const tl = gsap.timeline();
+    tl.to('.projthumb', {
+      scale: 1.1,
+      filter: 'blur(1px)',
+      // yoyo: true,
+      duration: 0.1,
+    });
+    tl.call(() => {
+      tl.kill();
+      // tl.restart();
+    });
   };
   const leaveAnimation = (e: React.SyntheticEvent<HTMLDivElement>) => {
-    /*  const activeEl = e.currentTarget;
-    gsap.to(activeEl, {
-      // filter: 'drop-shadow(0 0 0 black)',
+    // const activeEl = e.currentTarget;
+    gsap.to('.projthumb', {
+      filter: 'blur(0px)',
       scale: 1,
-      opacity: 1,
-    }); */
+    });
   };
 
   return (
     <div
       id='el'
-      className='element bg-background  horizontal  leading-loose   font-qaligo text-white flex items-center justify-center flex-col pt-16'
+      className='element bg-background  horizontal  leading-loose   font-qaligo text-white flex items-center justify-center flex-col pt-16 mt-40'
     >
       <div className='flex items-end gap-16 font-qaligo text-4xl '>
         <h4>(02)</h4>
@@ -66,10 +71,16 @@ const Projects = () => {
               </div>
             </div>
             <div
-              className='proj-img proj-a  relative '
-              onMouseOver={(e) => hoverAnimation(e)}
+              className='proj-img  proj-a  overflow-hidden w-96 h-96'
+              onMouseEnter={(e) => hoverAnimation(e)}
               onMouseLeave={(e) => leaveAnimation(e)}
-            ></div>
+            >
+              <img
+                src='/projects/a.jpg'
+                alt=''
+                className='w-96 h-fit projthumb'
+              />
+            </div>
             <div className='flex items-center flex-shrink-0 text-sm font-wavenhaussemibold opacity-60  mr-10'>
               <a href='/'>view the---project</a>
             </div>
@@ -90,7 +101,9 @@ const Projects = () => {
               className='proj-img proj-b  relative '
               onMouseOver={(e) => hoverAnimation(e)}
               onMouseLeave={(e) => leaveAnimation(e)}
-            ></div>
+            >
+              <img src='/projects/b.jpg' alt='' className=' w-96 projthumb' />
+            </div>
             <div className='flex items-center flex-shrink-0 text-sm font-wavenhaussemibold opacity-60 cursor-pointer mr-10'>
               view the---project
             </div>
@@ -111,7 +124,9 @@ const Projects = () => {
               className='proj-img proj-c  relative '
               onMouseOver={(e) => hoverAnimation(e)}
               onMouseLeave={(e) => leaveAnimation(e)}
-            ></div>
+            >
+              <img src='/projects/c.jpeg' alt='' className=' w-96 projthumb' />
+            </div>
             <div className='flex items-center flex-shrink-0 text-sm font-wavenhaussemibold opacity-60 cursor-pointer mr-10'>
               view the---project
             </div>
@@ -132,7 +147,9 @@ const Projects = () => {
               className='proj-img proj-d  relative '
               onMouseOver={(e) => hoverAnimation(e)}
               onMouseLeave={(e) => leaveAnimation(e)}
-            ></div>
+            >
+              <img src='/projects/d.jpg' alt='' className=' w-96 projthumb' />
+            </div>
             <div className='flex items-center flex-shrink-0 text-sm font-wavenhaussemibold opacity-60 cursor-pointer mr-10'>
               view the---project
             </div>
