@@ -3,8 +3,8 @@ import Container from '~/components/Container';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Projects from '~/components/Projects';
-// import Tools from '~/components/Tools';
-import Cursor from '~/components/cursor';
+import Cursor from '~/components/Cursor';
+import Message from '~/components/Message';
 import About from '~/components/About';
 
 export default function Index() {
@@ -375,7 +375,6 @@ export default function Index() {
   }, []);
 
   return (
-    // <div className='animation-wrapper flex h-fit  flex-col items-center justify-center'>
     <div className='bg-background overflow-x-hidden cursor-none'>
       <Cursor />
       <div className='element home bg-background  overflow-hidden relative '>
@@ -763,15 +762,8 @@ export default function Index() {
       </div>
 
       <Projects />
-      {/* <Tools /> */}
       <About />
+      <Message />
     </div>
-    // </div>
   );
 }
-// }
-// {
-//   /*
-
-// flex flex-wrap gap-x-6 justify-center*/
-// }
