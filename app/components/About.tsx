@@ -94,15 +94,19 @@ const About = () => {
     .add(restart, 8.2) */
   }, []);
   return (
-    <div className='  toolbelt bg-background font-qaligo mt-40 mb-20 '>
+    <div className='about bg-background font-qaligo mt-40 mb-20 '>
       <Container>
         <div className='text-white flex  items-center justify-start flex-col w-full gap-10 '>
-          <div className='flex items-end gap-16 font-qaligo text-4xl '>
-            <h4>(03)</h4>
-            <div className=' text-3xl mt-12 section-name flex'>
-              About & Experience
-            </div>
-            <h4>/^</h4>
+          <div className='flex items-center gap-4 font-qaligo text-4xl '>
+            <h4 className='mb-4'>(03)</h4>
+            <div className=' text-3xl  section-name '>about & experience</div>
+            <img
+              src='/assets/arrowvector.png'
+              alt=''
+              width={20}
+              height={20}
+              style={{ filter: `grayscale(100)` }}
+            />
           </div>
           <div className='details flex flex-col gap-12 mt-20'>
             <div className='about-container text-xl font-wavenhaussemibold  w-full   '>

@@ -45,10 +45,16 @@ const Projects = () => {
       id='el'
       className='element bg-background  horizontal  leading-loose   font-qaligo text-white flex items-center justify-center flex-col pt-16 mt-40'
     >
-      <div className='flex items-end gap-16 font-qaligo text-4xl '>
-        <h4>(02)</h4>
+      <div className='flex items-center gap-4 font-qaligo text-4xl '>
+        <h4 className='mb-4'>(02)</h4>
         <h2 className=' text-3xl'>projects</h2>
-        <h4>/^</h4>
+        <img
+          src='/assets/arrowvector.png'
+          alt=''
+          width={20}
+          height={20}
+          style={{ filter: `grayscale(100)` }}
+        />
       </div>
       <div
         className='w-full panels-container mt-8 h-full flex 
