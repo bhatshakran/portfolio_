@@ -197,8 +197,10 @@ export default function Index() {
             autoAlpha: 0,
             opacity: 0,
             ease: 'expo.easeInOut',
-            duration: 0.3,
+            duration: 1.5,
             delay: 1,
+            yoyo: true,
+            repeat: -1,
           },
           '<='
         );
@@ -727,7 +729,7 @@ export default function Index() {
             </div>
           </div>
           <div className=' main-image w-80 h-80 absolute  top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 '></div>
-          <div className='scroll  text-3xl absolute bottom-20 sm:bottom-0 left-1/2 -translate-x-1/2 font-wavenhaussemibold  '>
+          <div className='scroll  text-xl absolute bottom-20 sm:bottom-10 left-1/2 -translate-x-1/2 font-wavenhaussemibold  '>
             {' '}
             ↓scroll
           </div>

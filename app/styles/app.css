@@ -665,6 +665,42 @@ a {
   right: 0px;
 }
 
+.top-4 {
+  top: 1rem;
+}
+
+.top-10 {
+  top: 2.5rem;
+}
+
+.right-4 {
+  right: 1rem;
+}
+
+.top-16 {
+  top: 4rem;
+}
+
+.top-20 {
+  top: 5rem;
+}
+
+.right-6 {
+  right: 1.5rem;
+}
+
+.top-24 {
+  top: 6rem;
+}
+
+.right-10 {
+  right: 2.5rem;
+}
+
+.right-16 {
+  right: 4rem;
+}
+
 .left-1\/2 {
   left: 50%;
 }
@@ -685,92 +721,8 @@ a {
   bottom: 5rem;
 }
 
-.top-4 {
-  top: 1rem;
-}
-
 .right-8 {
   right: 2rem;
-}
-
-.top-10 {
-  top: 2.5rem;
-}
-
-.top-6 {
-  top: 1.5rem;
-}
-
-.top-5 {
-  top: 1.25rem;
-}
-
-.top-20 {
-  top: 5rem;
-}
-
-.right-6 {
-  right: 1.5rem;
-}
-
-.right-4 {
-  right: 1rem;
-}
-
-.right-2 {
-  right: 0.5rem;
-}
-
-.right-5 {
-  right: 1.25rem;
-}
-
-.top-16 {
-  top: 4rem;
-}
-
-.top-24 {
-  top: 6rem;
-}
-
-.right-7 {
-  right: 1.75rem;
-}
-
-.top-28 {
-  top: 7rem;
-}
-
-.bottom-28 {
-  bottom: 7rem;
-}
-
-.bottom-40 {
-  bottom: 10rem;
-}
-
-.bottom-44 {
-  bottom: 11rem;
-}
-
-.right-12 {
-  right: 3rem;
-}
-
-.right-10 {
-  right: 2.5rem;
-}
-
-.top-36 {
-  top: 9rem;
-}
-
-.right-16 {
-  right: 4rem;
-}
-
-.right-14 {
-  right: 3.5rem;
 }
 
 .z-10 {
@@ -796,6 +748,10 @@ a {
 
 .mb-20 {
   margin-bottom: 5rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .mb-4 {
@@ -848,22 +804,6 @@ a {
 
 .ml-3 {
   margin-left: 0.75rem;
-}
-
-.mb-6 {
-  margin-bottom: 1.5rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
 }
 
 .flex {
@@ -1059,10 +999,6 @@ a {
   border-bottom-width: 1px;
 }
 
-.border-none {
-  border-style: none;
-}
-
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
@@ -1196,10 +1132,6 @@ a {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.opacity-60 {
-  opacity: 0.6;
-}
-
 .opacity-80 {
   opacity: 0.8;
 }
@@ -1208,12 +1140,12 @@ a {
   opacity: 0.7;
 }
 
-.opacity-90 {
-  opacity: 0.9;
+.opacity-60 {
+  opacity: 0.6;
 }
 
-.outline {
-  outline-style: solid;
+.opacity-90 {
+  opacity: 0.9;
 }
 
 .blur {
@@ -1300,9 +1232,7 @@ a {
 }
 
 .scroll {
-  color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: grey;
+  color: white;
 }
 
 /* .panels-container { */
@@ -1467,8 +1397,12 @@ a {
     top: -4rem;
   }
 
-  .sm\:bottom-0 {
-    bottom: 0px;
+  .sm\:bottom-20 {
+    bottom: 5rem;
+  }
+
+  .sm\:bottom-10 {
+    bottom: 2.5rem;
   }
 
   .sm\:mt-32 {

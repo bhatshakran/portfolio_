@@ -112,9 +112,7 @@
     visibility: hidden;
   }
   .scroll {
-    color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: grey;
+    color: white;
   }
 
   /* .panels-container { */
