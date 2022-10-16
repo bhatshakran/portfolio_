@@ -102,7 +102,7 @@
   .lineSvg,
   .fullscreen-menu,
   .scroll,
-  .projects-heading {
+  projects-heading {
     visibility: hidden;
   }
   .scroll {

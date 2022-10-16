@@ -29,6 +29,37 @@ const Projects = () => {
       duration: 1.5,
       ease: 'power3.easeIn',
     });
+
+    const projNames = gsap.utils.toArray('.name');
+
+    projNames.forEach((item: any) => {
+      gsap.from(item, {
+        scrollTrigger: {
+          trigger: item,
+          start: 'top center',
+        },
+        width: '0px',
+        y: -200,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.easeInOut',
+      });
+    });
+    const projImgs = gsap.utils.toArray('.projthumb');
+    projImgs.forEach((item: any) => {
+      gsap.from(item, {
+        scrollTrigger: {
+          trigger: item,
+          start: 'top bottom',
+        },
+        width: '0px',
+        y: -200,
+        opacity: 0,
+        duration: 2,
+        delay: 0.5,
+        // ease: 'power3.easeInOut',
+      });
+    });
   }, []);
   // project hover animation
   const hoverAnimation = (e: React.SyntheticEvent<HTMLDivElement>) => {
@@ -86,7 +117,7 @@ const Projects = () => {
               onMouseLeave={(e) => leaveAnimation(e)}
             >
               <img
-                src='/projects/a.jpg'
+                src='/projects/a.jpeg'
                 alt=''
                 className='w-72 h-96 projthumb rounded-3xl'
               />
@@ -116,7 +147,7 @@ const Projects = () => {
               onMouseLeave={(e) => leaveAnimation(e)}
             >
               <img
-                src='/projects/b.jpg'
+                src='/projects/b.jpeg'
                 alt=''
                 className=' w-72 h-96 projthumb rounded-3xl'
               />
@@ -175,7 +206,7 @@ const Projects = () => {
               onMouseLeave={(e) => leaveAnimation(e)}
             >
               <img
-                src='/projects/d.jpg'
+                src='/projects/d.jpeg'
                 alt=''
                 className=' w-82 h-96 projthumb rounded-3xl'
               />
