@@ -815,6 +815,10 @@ a {
   margin-top: 3rem;
 }
 
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .ml-8 {
   margin-left: 2rem;
 }
@@ -857,6 +861,10 @@ a {
 
 .h-14 {
   height: 3.5rem;
+}
+
+.h-1 {
+  height: 0.25rem;
 }
 
 .h-auto {
@@ -1026,6 +1034,10 @@ a {
   overflow-x: hidden;
 }
 
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -1046,6 +1058,11 @@ a {
 
 .bg-transparent {
   background-color: transparent;
+}
+
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(167 64 54 / var(--tw-bg-opacity));
 }
 
 .bg-secondary {
@@ -1255,7 +1272,8 @@ a {
   .header,
   .lineSvg,
   .fullscreen-menu,
-  .scroll {
+  .scroll,
+  .projects-heading {
   visibility: hidden;
 }
 

@@ -3,13 +3,13 @@ const Message = () => {
     <div className=' message pb-24 bg-background font-qaligo text-secondary pt-12 flex items-start flex-col w-full relative px-4 md:px-16'>
       <div className='z-10'>
         <h2 className='text-4xl  leading-relaxed md:leading-normal md:text-6xl mt-12 no-color'>
-          Leave a message
+          Leave a message:
         </h2>
         <h2 className='text-4xl leading-relaxed md:text-6xl md:leading-normal mt-12'>
-          Leave <span className='text-primary'>a</span> message
+          Leave <span className='text-primary'>a</span> message:
         </h2>
         <h2 className='text-4xl leading-relaxed md:text-6xl md:leading-normal mt-12 no-color'>
-          Leave a message
+          Leave a message:
         </h2>
       </div>
       <div className='mt-28 w-full z-10'>

@@ -333,13 +333,13 @@ const About = () => {
           </div>
           <div className='flex flex-col items-center gap-14 font-qaligo text-4xl section-header '>
             <div className=' text-4xl md:text-6xl   section-name w-full no-color'>
-              about
+              about:
             </div>
             <div className=' text-4xl md:text-6xl   section-name w-full text-secondary'>
-              ab<span className=' text-primary'>o</span>ut
+              ab<span className=' text-primary'>o</span>ut:
             </div>
             <div className=' text-4xl md:text-6xl   section-name w-full no-color'>
-              about
+              about:
             </div>
           </div>
           <div className='details flex flex-wrap gap-12 mt-20 z-10 text-secondary'>

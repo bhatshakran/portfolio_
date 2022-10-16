@@ -101,7 +101,8 @@
   .header,
   .lineSvg,
   .fullscreen-menu,
-  .scroll {
+  .scroll,
+  .projects-heading {
     visibility: hidden;
   }
   .scroll {
