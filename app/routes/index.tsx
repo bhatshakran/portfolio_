@@ -404,7 +404,7 @@ export default function Index() {
           {/* image and text here */}
           <div className='overlay bg-background'></div>
           <div className=' txt-container  absolute  left-1/2 top-32 sm:top-16 -translate-x-1/2  sm:mt-32  z-10'>
-            <div className='text-wrapper font-qaligo w-full  mx-auto text-xl sm:text-4xl md:text-5xl leading-loose text-primary   z-10 pt-4 sm:py-8  text-center flex gap-4 sm:gap-y-16 flex-wrap justify-center '>
+            <div className='text-wrapper font-qaligo w-full text-secondary  mx-auto text-xl sm:text-4xl md:text-5xl leading-loose   z-10 pt-4 sm:py-8  text-center flex gap-4 sm:gap-y-16 flex-wrap justify-center '>
               <div className='flex '>
                 <div className='letter'>T</div>
                 <div className='letter'>h</div>
@@ -426,7 +426,7 @@ export default function Index() {
                   >
                     <path
                       d='M1 21.6773C101.987 25.3459 312.28 54.5847 345.555 142.191C387.149 251.699 135.579 201.476 79 155C37 120.5 4.93456 92.6649 31.3523 49.7422C57.7701 6.81948 167.376 -3.63605 222.46 9.02064'
-                      stroke='#ffffff'
+                      stroke='#A74036'
                       strokeWidth='7'
                     />
                   </svg>
@@ -728,10 +728,11 @@ export default function Index() {
               </svg>
             </div>
           </div>
-          <div className=' main-image w-80 h-80 absolute  top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 '></div>
-          <div className='scroll  text-xl absolute bottom-20 sm:bottom-10 left-1/2 -translate-x-1/2 font-wavenhaussemibold  '>
-            {' '}
-            ↓scroll
+          <div className=' main-image w-80 h-80 absolute  top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 '>
+            <div className='scroll  h-10  text-sm absolute  bottom-10 left-1/2 -translate-x-1/2 font-wavenhaussemibold leading-loose'>
+              {' '}
+              ↓scroll
+            </div>
           </div>
         </Container>
 
@@ -765,7 +766,7 @@ export default function Index() {
 
       <Projects />
       <About />
-      {/* <Message /> */}
+      <Message />
     </div>
   );
 }

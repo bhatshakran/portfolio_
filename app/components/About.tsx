@@ -114,7 +114,7 @@ const About = () => {
   // }, []);
 
   return (
-    <div className='about  font-qaligo mt-40 mb-20 relative px-16'>
+    <div className='about  font-qaligo mt-40 mb-20 relative p-4 md:px-16'>
       <Container>
         <div className=' flex    flex-col w-full gap-10 relative '>
           <div className='back-items absolute top-0 left-0   w-full h-full flex items-center justify-center'>
@@ -332,16 +332,18 @@ const About = () => {
           </div> */}
           </div>
           <div className='flex flex-col items-center gap-14 font-qaligo text-4xl section-header '>
-            {/* <h4 className='mb-4'>(03)</h4> */}
-            <div className=' text-6xl  section-name w-full no-color'>about</div>
-            <div className=' text-6xl  section-name w-full text-secondary'>
+            <div className=' text-4xl md:text-6xl   section-name w-full no-color'>
+              about
+            </div>
+            <div className=' text-4xl md:text-6xl   section-name w-full text-secondary'>
               ab<span className=' text-primary'>o</span>ut
             </div>
-            <div className=' text-6xl  section-name w-full no-color'>about</div>
-            {/* <img src='/assets/arrowvector.png' alt='' width={20} height={20} /> */}
+            <div className=' text-4xl md:text-6xl   section-name w-full no-color'>
+              about
+            </div>
           </div>
           <div className='details flex flex-wrap gap-12 mt-20 z-10 text-secondary'>
-            <div className='about-container text-xl font-wavenhaussemibold  w-2/3   '>
+            <div className='about-container text-xl font-wavenhaussemibold w-full  md:w-2/3   '>
               <p>
                 Hi, I am Shaqran Bhat from Kashmir, India. I am a fullstack
                 developer but frontend is my primary concern. My tech stack used
@@ -357,14 +359,18 @@ const About = () => {
             </div>
             <div className='experience w-full mt-28'>
               <div className='flex flex-col items-end'>
-                <h1 className='text-6xl no-color'>experience:</h1>
-                <h1 className='text-6xl mt-16 mb-16'>
+                <h1 className='text-2xl sm:text-4xl  md:text-6xl no-color'>
+                  experience:
+                </h1>
+                <h1 className='text-2xl sm:text-4xl md:text-6xl my-8 md:my-16 '>
                   e<span className=' text-primary'>x</span>perience:
                 </h1>
-                <h1 className='text-6xl no-color'>experience:</h1>
+                <h1 className='text-2xl sm:text-4xl md:text-6xl no-color'>
+                  experience:
+                </h1>
               </div>
 
-              <div className='past-container grid grid-cols-2 grid-rows-2 gap-y-24 mt-60'>
+              <div className='past-container flex flex-col  md:grid md:grid-cols-2 md:grid-rows-2 gap-y-24 mt-32 md:mt-60'>
                 <div className='homejam w-full col-span-1 col-start-1 col-end-1 row-start-1     '>
                   <h2 className='text-2xl font-wavenhausbold text-primary'>
                     Homejam
