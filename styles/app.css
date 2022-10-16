@@ -23,11 +23,7 @@
   src: url('/fonts/Qaligo-Elegant-Serif_Youthlab_071220/Qaligo\ Regular\ -\ Demo.otf');
   font-display: swap;
 }
-@font-face {
-  font-family: 'Sunflower';
-  src: url('/fonts/sunflower/MADE\ Sunflower\ PERSONAL\ USE.otf');
-  font-display: swap;
-}
+
 @font-face {
   font-family: 'Wavenhaus Semibold';
   src: url('/fonts/Wavehaus_Sans_Free_Typeface_Graham_Paterson_271219/Wavehaus-95SemiBold.otf');
@@ -54,14 +50,9 @@
     top: -10px;
     border-radius: 100%;
     z-index: 1;
-    /* // user-select: none; */
-    /* // pointer-events: none; */
+
     z-index: 10000;
     transform: scale(1);
-    /* // &.active { */
-    /* //     opacity: 1; */
-    /* //     transform: scale(0); */
-    /* // } */
   }
 
   .cursor-follow {
@@ -76,11 +67,7 @@
     user-select: none;
     pointer-events: none;
     z-index: 10000;
-    /* //overflow: hidden; */
     transform: scale(1);
-    /* // &.active { */
-    /* //     transform: scale(3); */
-    /* // }   */
   }
 
   .img-container {
@@ -109,11 +96,7 @@
     width: 100%;
     background-size: cover;
   }
-  /* .text-wrapper { */
-  /* color: #a74036; */
-  /* -webkit-text-fill-color: transparent; */
-  /* -webkit-text-stroke: 1px; */
-  /* } */
+
   .text-wrapper,
   .header,
   .lineSvg,
@@ -129,7 +112,7 @@
     .panels-container {
       display: grid;
       grid-template-rows: 130px 130px 130px 130px 130px 130px 130px 130px 130px 130px 130px 130px 130px;
-      row-gap: 10px;
+      row-gap: 50px;
     }
 
     .panel-4 {
@@ -137,46 +120,9 @@
     }
   }
 
-  /* .proj-a::after, */
-  /* .proj-b::after, */
-  /* .proj-c::after, */
-  /* .proj-d::after { */
-  /* content: ''; */
-  /* width: 100%; */
-  /* height: 100%; */
-  /* position: absolute; */
-  /* background: rgba(0, 0, 0, 0.4); */
-  /* top: 0; */
-  /* left: 0; */
-  /* } */
-
-  /* .message::after { */
-  /* content: ''; */
-  /* position: absolute; */
-  /* top: 0; */
-  /* left: 0; */
-  /* color: white; */
-  /* z-index: 1; */
-  /* background-image: url('/assets/37.png'); */
-  /* background-size: contain; */
-  /* background-position: center; */
-  /* background-repeat: no-repeat; */
-  /* width: 100%; */
-  /* height: 100%; */
-  /* opacity: 50%; */
-  /* } */
-
   .no-color {
     color: #a74036;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px;
   }
-
-  /* .section-header { */
-  /* background-image: url('/assets/TED.png'); */
-  /* background-size: cover; */
-  /* background-position: center; */
-  /* background-repeat: no-repeat; */
-  /* filter: grayscale(100%); */
-  /* } */
 }
