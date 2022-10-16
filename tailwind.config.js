@@ -18,12 +18,13 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: 'grey',
-        secondary: '#ffffff',
-        background: 'black',
+        primary: '#A74036',
+        secondary: '#4A4036',
+        background: '#EDDCC8',
       },
       fontFamily: {
         qaligo: ['Qaligo', 'sans-serif'],
+        sunflower: ['Sunflower', 'sans-serif'],
         wavenhausbold: ['Wavenhaus Bold', 'mono'],
         wavenhaussemibold: ['Wavenhaus Semibold', 'mono'],
         wavenhausextrabold: ['Wavenhaus Extrabold', 'mono'],
