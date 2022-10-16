@@ -3,7 +3,7 @@ import Container from '~/components/Container';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Projects from '~/components/Projects';
-import Cursor from '~/components/Cursor';
+import Cursor from '~/components/cursor';
 import Message from '~/components/Message';
 import About from '~/components/About';
 
