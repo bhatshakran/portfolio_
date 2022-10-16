@@ -335,13 +335,13 @@ const About = () => {
             {/* <h4 className='mb-4'>(03)</h4> */}
             <div className=' text-6xl  section-name w-full no-color'>about</div>
             <div className=' text-6xl  section-name w-full text-secondary'>
-              about
+              ab<span className=' text-primary'>o</span>ut
             </div>
             <div className=' text-6xl  section-name w-full no-color'>about</div>
             {/* <img src='/assets/arrowvector.png' alt='' width={20} height={20} /> */}
           </div>
           <div className='details flex flex-wrap gap-12 mt-20 z-10 text-secondary'>
-            <div className='about-container text-xl font-wavenhaussemibold  w-1/3   '>
+            <div className='about-container text-xl font-wavenhaussemibold  w-2/3   '>
               <p>
                 Hi, I am Shaqran Bhat from Kashmir, India. I am a fullstack
                 developer but frontend is my primary concern. My tech stack used
@@ -357,9 +357,11 @@ const About = () => {
             </div>
             <div className='experience w-full mt-28'>
               <div className='flex flex-col items-end'>
-                <h1 className='text-6xl no-color'>past experience:</h1>
-                <h1 className='text-6xl mt-16 mb-16'>past experience:</h1>
-                <h1 className='text-6xl no-color'>past experience:</h1>
+                <h1 className='text-6xl no-color'>experience:</h1>
+                <h1 className='text-6xl mt-16 mb-16'>
+                  e<span className=' text-primary'>x</span>perience:
+                </h1>
+                <h1 className='text-6xl no-color'>experience:</h1>
               </div>
 
               <div className='past-container grid grid-cols-2 grid-rows-2 gap-y-24 mt-60'>

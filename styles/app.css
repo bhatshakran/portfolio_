@@ -120,72 +120,36 @@
     color: white;
   }
 
-  /* .panels-container { */
-  /* width: 400%; */
+  .panels-container {
+    /* width: 400%;
+   */
+    display: grid;
+    grid-template-rows: 180px 180px 180px 180px 180px 180px 180px 180px 180px 180px 180px 180px 180px;
+    row-gap: 50px;
+  }
+
+  .panel-3 {
+    grid-row-start: 7;
+    grid-row-end: 11;
+  }
+
+  .panel-4 {
+    grid-row-start: 10;
+    /* grid-row-end: 13; */
+  }
+
+  /* .proj-a::after, */
+  /* .proj-b::after, */
+  /* .proj-c::after, */
+  /* .proj-d::after { */
+  /* content: ''; */
+  /* width: 100%; */
+  /* height: 100%; */
+  /* position: absolute; */
+  /* background: rgba(0, 0, 0, 0.4); */
+  /* top: 0; */
+  /* left: 0; */
   /* } */
-  .horizontal {
-    visibility: hidden;
-  }
-
-  .panel {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-    justify-content: center;
-  }
-
-  .proj-a::after,
-  .proj-b::after,
-  .proj-c::after,
-  .proj-d::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.4);
-    top: 0;
-    left: 0;
-  }
-  .redball {
-    background-image: url('/assets/redball.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    visibility: hidden;
-  }
-
-  .react {
-    background-image: url('/tools/reactlogo 1.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  .javascript {
-    background-image: url('/tools/jslogo 1.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  .threejs {
-    background-image: url('/tools/threelogo.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  .gsap {
-    background-image: url('/tools/gsaplogo.jpeg');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  .tailwind {
-    background-image: url('/tools/twlogo.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
 
   .message::after {
     content: '';
