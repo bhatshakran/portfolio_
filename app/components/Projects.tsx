@@ -14,6 +14,7 @@ const Projects = () => {
     let titleSection = document.querySelectorAll('.title-section');
     let tl1 = gsap.timeline({
       scrollTrigger: {
+        // markers: true,
         trigger: '.projects',
         start: 'top bottom',
       },
@@ -97,7 +98,7 @@ const Projects = () => {
       className='projects bg-background  leading-loose   font-qaligo text-primary flex flex-col items-end p-4 md:p-16 mt-28  lg:mt-60'
     >
       <div className='proj-section-a flex items-center gap-4 font-qaligo text-4xl text-secondary '>
-        <div className='projects-heading flex flex-col items-end gap-y-16'>
+        <div className=' projects-heading flex flex-col items-end gap-y-16'>
           <h2 className='text-4xl md:text-6xl no-color heading'>projects:</h2>
           <h2 className='text-4xl md:text-6xl heading'>
             pr<span className='text-primary'>o</span>jects:

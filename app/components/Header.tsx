@@ -125,8 +125,12 @@ const Header = () => {
         <div className='fullscreen-menu bg-white h-screen w-screen absolute top-0 left-0 z-20 flex flex-wrap '>
           <div className='left-pane  bg-primary w-full md:w-1/2 h-1/2 md:h-full flex items-center text-white'>
             <ul className='flex flex-col items-center w-full text-lg md:text-3xl gap-y-4 md:gap-y-24 font-qaligo'>
-              <li>home</li>
-              <li>projects</li>
+              <li>
+                <a href='/'>home</a>
+              </li>
+              <li>
+                <a href='#projects'>projects</a>
+              </li>
               <li>about</li>
               <li>blog</li>
             </ul>

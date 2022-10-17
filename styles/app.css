@@ -135,4 +135,14 @@
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px;
   }
+
+  #container {
+    background: #dfdfdf;
+    /* height: 100vh; */
+    /* overflow: hidden; */
+  }
+
+  .blog-section {
+    height: 100vh;
+  }
 }

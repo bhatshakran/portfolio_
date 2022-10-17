@@ -168,7 +168,10 @@ export const Landing = () => {
   }, []);
 
   return (
-    <section className='element home bg-background  overflow-hidden relative '>
+    <section
+      id='home'
+      className='element home bg-background  overflow-hidden relative '
+    >
       <Container>
         {/* header here */}
         <Header />
