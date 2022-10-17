@@ -344,7 +344,7 @@ const About = () => {
               <span className='about-reveal'>about:</span>
             </div>
           </div>
-          <div className=' about-line w-full h-1 bg-primary mt-16'></div>
+          <div className=' about-line w-full h-1 bg-primary '></div>
 
           <div className='details flex flex-wrap gap-12 mt-20 z-10 text-secondary'>
             <div className='about-container text-xl font-wavenhaussemibold w-full  md:w-2/3 overflow-hidden   '>
@@ -362,19 +362,19 @@ const About = () => {
               </p>
             </div>
             <div className='experience w-full mt-28'>
-              <div className='flex flex-col gap-0 items-end'>
-                <h1 className='text-2xl experience-section-name sm:text-4xl  md:text-6xl no-color py-8'>
+              <div className=' flex flex-col gap-0  items-end'>
+                <h1 className='text-2xl  experience-section-name sm:text-4xl  md:text-6xl no-color py-4 sm:py-8'>
                   <span className='exper-reveal'>experience:</span>
                 </h1>
-                <h1 className='text-2xl experience-section-name sm:text-4xl md:text-6xl   py-8 '>
+                <h1 className='text-2xl  experience-section-name sm:text-4xl md:text-6xl   py-4 sm:py-8 '>
                   <span className='exper-reveal'>
                     e<span className=' text-primary'>x</span>perience:
                   </span>
                 </h1>
-                <h1 className='text-2xl experience-section-name sm:text-4xl md:text-6xl no-color py-8'>
+                <h1 className='text-2xl   experience-section-name sm:text-4xl md:text-6xl no-color py-4 sm:py-8'>
                   <span className='exper-reveal'>experience:</span>
                 </h1>
-                <div className=' exper-line w-full h-1 bg-primary mt-16'></div>
+                <div className=' exper-line w-full h-1 bg-primary mt-8 sm:mt-16'></div>
               </div>
 
               <div className='past-container flex flex-col  md:grid md:grid-cols-2 md:grid-rows-2 gap-y-24 mt-32 md:mt-60'>
