@@ -112,18 +112,15 @@
   .scroll {
     color: white;
   }
-
-  /* .projects-heading > .heading { */
-  /* transform: translate(0, -100px); */
-  /* opacity: 0; */
-  /* transition: all 0.8s ease-in-out; */
-  /* transition-delay: 0.2s; */
-  /* } */
-
-  /* .projects-heading .is-reveal { */
-  /* opacity: 1; */
-  /* transform: translate(0, 0); */
-  /* } */
+  .about-section-name,
+  .experience-section-name {
+    overflow: hidden;
+  }
+  .about-reveal,
+  .exper-reveal {
+    display: inline-block;
+    transform: translate(0, -250%);
+  }
 
   @media only screen and (min-width: 768px) {
     .panels-container {
@@ -142,14 +139,4 @@
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px;
   }
-
-  /* .proj-img > img { */
-  /* clip-path: inset(100% 0% 0% 0%); */
-  /* transition: clip-path 1s cubic-bezier(0.77, 0, 0.175, 1); */
-  /* } */
-  /*  */
-  /* .proj-img > .is-reveal { */
-  /* clip-path: inset(0% 0% 0% 0%); */
-  /* width: 100%; */
-  /* } */
 }

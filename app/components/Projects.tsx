@@ -32,7 +32,6 @@ const Projects = () => {
         start: 'top bottom',
       },
     });
-    // tl2.set('.projthumb', { autoAlpha: 1, opacity: 0 });
 
     tl2.from(line, {
       width: 0,

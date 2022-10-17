@@ -2,7 +2,7 @@ import React from 'react';
 import gsap from 'gsap';
 
 const Header = () => {
-  const [showMenu, setShowMenu] = React.useState(true);
+  const [showMenu, setShowMenu] = React.useState(false);
 
   // menu animation
   React.useEffect(() => {

@@ -73,7 +73,11 @@ export default function Index() {
     return () => {
       window.removeEventListener('mousemove', moveCursor);
       link.forEach((el) => el.removeEventListener('mouseenter', hoverFunc));
+      closeBtn?.removeEventListener('mouseover', hoverFunc);
+      closeBtn?.removeEventListener('mouseleave', unhoverFunc);
+      li.forEach((el) => el.removeEventListener('mouseenter', hoverFunc));
       link.forEach((el) => el.removeEventListener('mouseleave', unhoverFunc));
+      li.forEach((el) => el.removeEventListener('mouseleave', unhoverFunc));
     };
   }, []);
 
