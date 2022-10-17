@@ -6,62 +6,71 @@ const Projects = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   React.useEffect(() => {
-    console.clear();
+    // console.clear();
     let headings = document.querySelectorAll('.heading');
     let line = document.querySelector('.project-line');
+    let panelImg = document.querySelectorAll('.projthumb');
     // let panelsContainer = document.querySelector('.panels-container');
-    // let panels = document.querySelectorAll('.panel');
+    let titleSection = document.querySelectorAll('.title-section');
     let tl1 = gsap.timeline({
       scrollTrigger: {
-        trigger: headings,
-        start: 'top 70%',
-        // markers: true,
+        trigger: '.projects',
+        start: 'top bottom',
       },
     });
-
     tl1.from(headings, {
       y: -200,
       opacity: 0,
       stagger: 0.2,
       duration: 0.5,
+      ease: 'power2',
     });
 
     let tl2 = gsap.timeline({
       scrollTrigger: {
         trigger: line,
-        start: 'top 85%',
+        start: 'top bottom',
       },
     });
+    // tl2.set('.projthumb', { autoAlpha: 1, opacity: 0 });
 
-    tl2.set('.projthumb', { autoAlpha: 1, opacity: 0 });
     tl2.from(line, {
       width: 0,
       opacity: 0,
-      // x: 200,
-      duration: 0.5,
-      ease: 'power2.inOut',
-    });
-
-    /* tl2.from('.proj-a > .projthumb', {
-      // scale: 0.5,
-      width: 0,
-      x: 100,
-      duration: 0.5,
-    }); */
-
-    /*  const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.proj-a',
-        start: 'top 90%',
-        markers: true,
-      },
-    });
-    tl.from('.proj-a > .projthumb', {
-      scale: 0.5,
-      width: 0,
-      x: 100,
       duration: 1,
-    }); */
+      ease: 'power2.easeIn',
+    });
+
+    titleSection.forEach((section: any) => {
+      let tl4 = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: 'top bottom',
+        },
+      });
+
+      tl4.from(section, {
+        y: 100,
+        opacity: 0,
+        duration: 0.5,
+      });
+    });
+
+    panelImg.forEach((img: any) => {
+      let tl3 = gsap.timeline({
+        scrollTrigger: {
+          trigger: img,
+          start: 'top bottom',
+        },
+      });
+
+      // tl3.from()
+
+      tl3.from(img, {
+        clipPath: 'inset(100% 0% 0% 0%)',
+        duration: 1,
+      });
+    });
   }, []);
 
   // project hover animation
@@ -83,8 +92,9 @@ const Projects = () => {
   };
 
   return (
-    <div
+    <section
       id='el'
+      // data-scroll-section
       className='projects bg-background  leading-loose   font-qaligo text-primary flex flex-col items-end p-4 md:p-16 mt-28  lg:mt-60'
     >
       <div className='proj-section-a flex items-center gap-4 font-qaligo text-4xl text-secondary '>
@@ -96,7 +106,7 @@ const Projects = () => {
           <h2 className='text-4xl md:text-6xl no-color heading'>projects:</h2>
         </div>
       </div>
-      <div className='proj-section project-line w-full h-1 bg-primary mt-16'></div>
+      <div className=' project-line w-full h-1 bg-primary mt-16'></div>
       <div
         className='w-full proj-section panels-container mt-40 flex flex-col items-start gap-y-24 md:grid md:grid-cols-2
          text-secondary '
@@ -120,6 +130,7 @@ const Projects = () => {
               onMouseLeave={(e) => leaveAnimation(e)}
             >
               <img
+                /* data-scroll */
                 src='/assets/a.png'
                 alt=''
                 className='w-72 h-96 projthumb rounded-3xl'
@@ -150,6 +161,7 @@ const Projects = () => {
               onMouseLeave={(e) => leaveAnimation(e)}
             >
               <img
+                /* data-scroll */
                 src='/projects/b.jpeg'
                 alt=''
                 className=' w-72 h-96 projthumb rounded-3xl'
@@ -180,6 +192,7 @@ const Projects = () => {
               onMouseLeave={(e) => leaveAnimation(e)}
             >
               <img
+                /* data-scroll */
                 src='/projects/c.jpeg'
                 alt=''
                 className=' w-72 h-96 projthumb rounded-3xl'
@@ -209,6 +222,7 @@ const Projects = () => {
               onMouseLeave={(e) => leaveAnimation(e)}
             >
               <img
+                /* data-scroll */
                 src='/projects/d.jpeg'
                 alt=''
                 className=' w-82 h-96 projthumb rounded-3xl'
@@ -220,7 +234,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

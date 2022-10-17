@@ -13,6 +13,7 @@
     "@remix-run/react": "^1.7.1",
     "@remix-run/serve": "^1.7.1",
     "gsap": "^3.11.1",
+    "locomotive-scroll": "^4.1.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
@@ -22,6 +23,7 @@
   "devDependencies": {
     "@remix-run/dev": "^1.7.1",
     "@remix-run/eslint-config": "^1.7.1",
+    "@types/locomotive-scroll": "^4.1.0",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "autoprefixer": "^10.4.12",
