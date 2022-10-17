@@ -10,13 +10,9 @@
     /* overflow: hidden; */
   }
 
-  /* body { */
-  /* height: 100vh; */
-  /*  */
-  /* } */
-  /* ::-webkit-scrollbar { */
-  /* display: none; */
-  /* } */
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
   a {
     @apply z-0;
