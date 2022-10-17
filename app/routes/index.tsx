@@ -278,11 +278,16 @@ export default function Index() {
   }, [showMenu]);
 
   const displayMenu = () => {
+    const body = document.body;
+    body.style.overflow = 'hidden';
     setShowMenu(true);
   };
 
   // close menu animation and logic
   const closeMenu = () => {
+    const body = document.body;
+    body.style.overflow = 'auto';
+
     const tl = gsap.timeline();
     tl.to('.left-pane', {
       opacity: 0,
