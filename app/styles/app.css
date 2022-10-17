@@ -951,6 +951,10 @@ a {
   cursor: pointer;
 }
 
+.cursor-none {
+  cursor: none;
+}
+
 .resize-none {
   resize: none;
 }
@@ -1084,6 +1088,15 @@ a {
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(167 64 54 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-none {
+  background-image: none;
 }
 
 .p-4 {

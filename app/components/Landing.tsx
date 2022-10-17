@@ -509,33 +509,6 @@ export const Landing = () => {
           </div>
         </div>
       </Container>
-
-      {/* {showMenu && (
-          <div className='fullscreen-menu bg-black h-screen w-screen absolute top-0 left-0 z-20 flex flex-wrap '>
-            <div className='left-pane  bg-secondary w-full md:w-1/2 h-1/2 md:h-full flex items-center'>
-              <ul className='flex flex-col items-center w-full text-lg md:text-3xl gap-y-4 md:gap-y-24 font-qaligo'>
-                <li>home</li>
-                <li>projects</li>
-                <li>about</li>
-                <li>blog</li>
-              </ul>
-            </div>
-            <div className='right-pane bg-pink-100 w-full md:w-1/2 h-1/2 md:h-full flex items-center'>
-              <ul className='flex flex-col items-center w-full text-lg md:text-3xl gap-y-4 md:gap-y-24 font-qaligo'>
-                <li>github</li>
-                <li>twitter</li>
-                <li>instagram</li>
-              </ul>
-            </div>
-
-            <div
-              className='close absolute top-4 right-8 z-30 text-3xl cursor-pointer'
-              onClick={closeMenu}
-            >
-              x
-            </div>
-          </div>
-        )} */}
     </section>
   );
 };

@@ -3,9 +3,9 @@ import React from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Projects from '~/components/Projects';
-// import Cursor from '~/components/cursor';
-// import Message from '~/components/Message';
-// import About from '~/components/About';
+import Cursor from '~/components/cursor';
+import Message from '~/components/Message';
+import About from '~/components/About';
 // import useLocoScroll from '~/utils/useLocoScroll';
 import { Landing } from '~/components/Landing';
 
@@ -33,7 +33,7 @@ export default function Index() {
       });
     }
 
-    function hoverFunc(e: MouseEvent) {
+    function hoverFunc(e: MouseEvent | Event) {
       gsap.to(cursor, {
         duration: 0.3,
         opacity: 1,
@@ -45,7 +45,7 @@ export default function Index() {
       });
     }
 
-    function unhoverFunc(e: MouseEvent) {
+    function unhoverFunc(e: MouseEvent | Event) {
       gsap.to(cursor, {
         duration: 0.3,
         opacity: 1,
@@ -60,8 +60,15 @@ export default function Index() {
     window.addEventListener('mousemove', moveCursor);
 
     const link = document.querySelectorAll('a');
+    const li = document.querySelectorAll('li');
+    const closeBtn = document.querySelector('.close');
+
     link.forEach((el) => el.addEventListener('mouseover', hoverFunc));
+    closeBtn?.addEventListener('mouseover', hoverFunc);
+    li.forEach((el) => el.addEventListener('mouseover', hoverFunc));
     link.forEach((el) => el.addEventListener('mouseleave', unhoverFunc));
+    li.forEach((el) => el.addEventListener('mouseleave', unhoverFunc));
+    closeBtn?.addEventListener('mouseleave', unhoverFunc);
 
     return () => {
       window.removeEventListener('mousemove', moveCursor);
@@ -69,53 +76,6 @@ export default function Index() {
       link.forEach((el) => el.removeEventListener('mouseleave', unhoverFunc));
     };
   }, []);
-
-  // menu animation
-  /*  React.useEffect(() => {
-    const tl = gsap.timeline();
-    if (showMenu) {
-      tl.set('.fullscreen-menu', { autoAlpha: 1, opacity: 1 });
-
-      tl.from('.left-pane', {
-        opacity: 0,
-        y: '100%',
-        duration: 1,
-        ease: 'expo.easeInOut',
-      });
-      tl.from(
-        '.right-pane',
-        {
-          opacity: 0,
-          y: '-100%',
-          duration: 1,
-          ease: 'expo.easeInOut',
-        },
-        '<='
-      );
-
-      tl.from(
-        '.left-pane > ul',
-        {
-          scale: 0.5,
-          duration: 1,
-          y: '100%',
-          opacity: 0,
-          ease: 'expo.easeInOut',
-        },
-        '+<=0.5'
-      );
-      tl.from(
-        '.right-pane > ul',
-        {
-          scale: 0.5,
-          duration: 1.1,
-          y: '-100%',
-          ease: 'expo.easeInOut',
-        },
-        '<=0.3'
-      );
-    }
-  }, [showMenu]); */
 
   // scroll animation
   React.useEffect(() => {
@@ -175,14 +135,14 @@ export default function Index() {
   return (
     <div
       id='main-container'
-      className='bg-background  overflow-x-hidden cursor-pointer'
+      className='bg-background  overflow-x-hidden cursor-none'
       data-scroll-container
     >
-      {/* <Cursor /> */}
+      <Cursor />
       <Landing />
       <Projects />
-      {/* <About />
-      <Message /> */}
+      <About />
+      <Message />
     </div>
   );
 }
