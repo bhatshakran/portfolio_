@@ -132,7 +132,7 @@ const Projects = () => {
             >
               <img
                 /* data-scroll */
-                src='/projects/a.png'
+                src='/projects/a/a.png'
                 alt=''
                 className='w-auto object-contain h-full projthumb rounded-3xl'
               />
@@ -163,7 +163,7 @@ const Projects = () => {
             >
               <img
                 /* data-scroll */
-                src='/projects/b.png'
+                src='/projects/b/b.png'
                 alt=''
                 className=' w-auto h-full object-contain projthumb rounded-3xl'
               />
@@ -194,7 +194,7 @@ const Projects = () => {
             >
               <img
                 /* data-scroll */
-                src='/projects/c.png'
+                src='/projects/c/c.png'
                 alt=''
                 className=' w-auto object-contain h-full projthumb rounded-3xl'
               />
@@ -224,7 +224,7 @@ const Projects = () => {
             >
               <img
                 /* data-scroll */
-                src='/projects/d.png'
+                src='/projects/d/d.png'
                 alt=''
                 className=' w-auto object-contain h-full projthumb rounded-3xl'
               />
