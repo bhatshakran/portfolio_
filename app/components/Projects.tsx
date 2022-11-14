@@ -112,28 +112,28 @@ const Projects = () => {
          text-secondary '
       >
         <div className='panel panel-1 w-full   overflow-hidden md:row-span-4  '>
-          <div className='inside-panel mt-6 gap-6  w-full flex flex-col items-center  justify-center  '>
-            <div className='title-section flex  w-full h-auto items-start gap-x-3 justify-center '>
+          <div className='inside-panel mt-6 gap-6  w-full flex flex-col items-center    '>
+            <div className='title-section  flex  w-full  items-start gap-x-3 justify-center '>
               <div className='info font-wavenhaussemibold text-sm opacity-60'>
                 (01)
               </div>
               <div className='name text-lg md:text-3xl  text-primary'>
-                aesthetic
+                Ottelo
               </div>
               <div className='type font-wavenhaussemibold text-xs opacity-60'>
-                Next.js Application
+                hotel booking website
               </div>
             </div>
             <div
-              className='proj-img  proj-a  overflow-hidden w-96 h-auto flex justify-center rounded-3xl'
+              className='proj-img  proj-a  overflow-hidden w-96  flex justify-center rounded-3xl h-52'
               onMouseEnter={(e) => hoverAnimation(e)}
               onMouseLeave={(e) => leaveAnimation(e)}
             >
               <img
                 /* data-scroll */
-                src='/assets/a.png'
+                src='/projects/a.png'
                 alt=''
-                className='w-72 h-96 projthumb rounded-3xl'
+                className='w-auto object-contain h-full projthumb rounded-3xl'
               />
             </div>
             <div className='bg-secondary flex items-start  text-sm font-wavenhaussemibold opacity-60 cursor-pointer text-white'>
@@ -149,22 +149,22 @@ const Projects = () => {
                 (02)
               </div>
               <div className='name text-lg md:text-3xl  text-primary'>
-                runtastic
+                Chatter
               </div>
               <div className='type font-wavenhaussemibold text-xs opacity-60'>
-                Next.js Application
+                Next.js chat application
               </div>
             </div>
             <div
-              className='proj-img  proj-b overflow-hidden w-96 h-auto flex justify-center rounded-3xl'
+              className='proj-img  proj-b overflow-hidden w-96 h-52 flex justify-center rounded-3xl'
               onMouseOver={(e) => hoverAnimation(e)}
               onMouseLeave={(e) => leaveAnimation(e)}
             >
               <img
                 /* data-scroll */
-                src='/projects/b.jpeg'
+                src='/projects/b.png'
                 alt=''
-                className=' w-72 h-96 projthumb rounded-3xl'
+                className=' w-auto h-full object-contain projthumb rounded-3xl'
               />
             </div>
             <div className='bg-secondary flex items-start  text-sm font-wavenhaussemibold opacity-60 cursor-pointer text-white'>
@@ -180,22 +180,22 @@ const Projects = () => {
                 (03)
               </div>
               <div className='name text-lg md:text-3xl opacity-90  text-primary'>
-                extracts
+                JD
               </div>
               <div className='type font-wavenhaussemibold text-xs opacity-60'>
-                Next.js Application
+                Next.js design agency site
               </div>
             </div>
             <div
-              className='proj-img  proj-c  overflow-hidden w-96 h-auto flex justify-center rounded-3xl'
+              className='proj-img  proj-c  overflow-hidden w-96 h-52 flex justify-center rounded-3xl'
               onMouseOver={(e) => hoverAnimation(e)}
               onMouseLeave={(e) => leaveAnimation(e)}
             >
               <img
                 /* data-scroll */
-                src='/projects/c.jpeg'
+                src='/projects/c.png'
                 alt=''
-                className=' w-72 h-96 projthumb rounded-3xl'
+                className=' w-auto object-contain h-full projthumb rounded-3xl'
               />
             </div>
             <div className='bg-secondary flex items-start  text-sm font-wavenhaussemibold opacity-60 cursor-pointer text-white'>
@@ -209,23 +209,23 @@ const Projects = () => {
               <div className='info font-wavenhaussemibold text-sm opacity-60'>
                 (04)
               </div>
-              <div className='name text-lg md:text-3xl text-primary'>
-                snowwer
+              <div className='name text-lg md:text-3xl text-primary leading-loose'>
+                Ski Store
               </div>
               <div className='type font-wavenhaussemibold text-xs opacity-60'>
-                Next.js Application
+                Next.js ecommerce app
               </div>
             </div>
             <div
-              className='proj-img  proj-d  overflow-hidden w-96 h-auto flex justify-center rounded-3xl '
+              className='proj-img  proj-d  overflow-hidden w-96 h-52 flex justify-center rounded-3xl '
               onMouseOver={(e) => hoverAnimation(e)}
               onMouseLeave={(e) => leaveAnimation(e)}
             >
               <img
                 /* data-scroll */
-                src='/projects/d.jpeg'
+                src='/projects/d.png'
                 alt=''
-                className=' w-82 h-96 projthumb rounded-3xl'
+                className=' w-auto object-contain h-full projthumb rounded-3xl'
               />
             </div>
             <div className='bg-secondary flex items-start  text-sm font-wavenhaussemibold opacity-60 cursor-pointer text-white'>
