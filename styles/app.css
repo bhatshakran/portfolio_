@@ -121,12 +121,12 @@
   @media only screen and (min-width: 768px) {
     .panels-container {
       display: grid;
-      grid-template-rows: 130px 130px 130px 130px 130px 130px 130px 130px 130px 130px 130px 130px 130px;
+      grid-template-rows: 130px 130px 130px 130px 130px 130px 130px 130px 130px;
       row-gap: 50px;
     }
 
     .panel-4 {
-      grid-row-start: 10 !important;
+      grid-row-start: 7 !important;
     }
   }
 

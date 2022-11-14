@@ -1,3 +1,4 @@
+import { Link } from '@remix-run/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import React from 'react';
@@ -111,7 +112,7 @@ const Projects = () => {
         className='w-full proj-section panels-container mt-40 flex flex-col items-start gap-y-24 md:grid md:grid-cols-2
          text-secondary '
       >
-        <div className='panel panel-1 w-full   overflow-hidden md:row-span-4  '>
+        <div className='panel panel-1 w-full   overflow-hidden md:row-span-3  '>
           <div className='inside-panel mt-6 gap-6  w-full flex flex-col items-center    '>
             <div className='title-section  flex  w-full  items-start gap-x-3 justify-center '>
               <div className='info font-wavenhaussemibold text-sm opacity-60'>
@@ -137,12 +138,12 @@ const Projects = () => {
               />
             </div>
             <div className='bg-secondary flex items-start  text-sm font-wavenhaussemibold opacity-60 cursor-pointer text-white'>
-              <a href='/'>view the---project</a>
+              <Link to='/projects/a'>view the---project</Link>
             </div>
           </div>
         </div>
 
-        <div className='panel panel-2  w-full overflow-hidden  md:row-span-4 md:row-start-4 md:col-start-2'>
+        <div className='panel panel-2  w-full overflow-hidden  md:row-span-3 md:row-start-3 md:col-start-2'>
           <div className='inside-panel mt-6 gap-6  w-full flex flex-col items-center  justify-center  '>
             <div className='title-section flex  w-full h-auto items-start gap-x-3 justify-center '>
               <div className='info font-wavenhaussemibold text-sm opacity-60'>
@@ -152,7 +153,7 @@ const Projects = () => {
                 Chatter
               </div>
               <div className='type font-wavenhaussemibold text-xs opacity-60'>
-                Next.js chat application
+                chat application
               </div>
             </div>
             <div
@@ -168,12 +169,12 @@ const Projects = () => {
               />
             </div>
             <div className='bg-secondary flex items-start  text-sm font-wavenhaussemibold opacity-60 cursor-pointer text-white'>
-              <a href='/'>view the---project</a>
+              <Link to='/projects/b'>view the---project</Link>
             </div>
           </div>
         </div>
 
-        <div className='panel panel-3  w-full overflow-hidden  md:row-span-4  md:col-start-1  md:row-start-7'>
+        <div className='panel panel-3  w-full overflow-hidden  md:row-span-3  md:col-start-1  md:row-start-5'>
           <div className='inside-panel mt-6 gap-6 w-full flex flex-col items-center  justify-center  '>
             <div className='title-section flex  w-full h-auto items-start gap-x-3 justify-center '>
               <div className='info font-wavenhaussemibold text-sm opacity-60'>
@@ -183,7 +184,7 @@ const Projects = () => {
                 JD
               </div>
               <div className='type font-wavenhaussemibold text-xs opacity-60'>
-                Next.js design agency site
+                design agency site
               </div>
             </div>
             <div
@@ -199,11 +200,11 @@ const Projects = () => {
               />
             </div>
             <div className='bg-secondary flex items-start  text-sm font-wavenhaussemibold opacity-60 cursor-pointer text-white'>
-              <a href='/'>view the---project</a>
+              <Link to='/projects/c'>view the---project</Link>
             </div>
           </div>
         </div>
-        <div className='panel panel-4 w-full overflow-hidden md:row-span-4 md:col-start-2'>
+        <div className='panel panel-4 w-full overflow-hidden md:row-span-3 md:col-start-2'>
           <div className='inside-panel mt-6 gap-6 w-full flex flex-col items-center  justify-center  '>
             <div className='title-section flex  w-full h-auto items-start gap-x-3 justify-center '>
               <div className='info font-wavenhaussemibold text-sm opacity-60'>
@@ -213,7 +214,7 @@ const Projects = () => {
                 Ski Store
               </div>
               <div className='type font-wavenhaussemibold text-xs opacity-60'>
-                Next.js ecommerce app
+                ecommerce app
               </div>
             </div>
             <div
@@ -229,7 +230,7 @@ const Projects = () => {
               />
             </div>
             <div className='bg-secondary flex items-start  text-sm font-wavenhaussemibold opacity-60 cursor-pointer text-white'>
-              <a href='/'>view the---project</a>
+              <Link to='/projects/d'>view the---project</Link>
             </div>
           </div>
         </div>

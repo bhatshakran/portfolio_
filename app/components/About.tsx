@@ -114,7 +114,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className='about  font-qaligo mt-40 mb-20 relative p-4 md:px-16'>
+    <div className='about  font-qaligo mt-28 mb-20 relative p-4 md:px-16'>
       <Container>
         <div className=' flex    flex-col w-full gap-10 relative '>
           <div className='back-items absolute top-0 left-0   w-full h-full flex items-center justify-center'>
