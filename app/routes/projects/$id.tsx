@@ -96,7 +96,7 @@ const ProjectPage = () => {
   const { data } = useLoaderData();
 
   return (
-    <main className='bg-background  flex flex-col pt-8 sm:pt-16 pb-60 px-2 sm:px-4 md:px-12'>
+    <main className='bg-background  flex flex-col pt-8 sm:pt-16 pb-60 px-2 sm:px-4 md:px-12  w-full'>
       <Container>
         <div>
           <Link
@@ -106,9 +106,9 @@ const ProjectPage = () => {
             Go back
           </Link>
         </div>
-        <div className='w-full flex flex-col gap-16 md:gap-32 justify-center items-center'>
-          <div className='text-lg sm:text-3xl md:text-5xl font-qaligo leading-relaxed  sm:leading-loose  md:leading-loose md:mt-32 text-secondary flex gap-4  flex-col'>
-            <h2>Detailed look into the app</h2>
+        <div className='w-full  flex flex-col gap-16 md:gap-32 items-start justify-center md:items-center'>
+          <div className='w-full text-lg sm:text-3xl md:text-5xl font-qaligo leading-relaxed mt-8  sm:leading-loose  md:leading-loose md:mt-32 text-secondary flex gap-4  flex-col '>
+            <h2 className='w-full h-auto'>Detailed look into the app</h2>
             <h2 className='text-primary '>{data.title}</h2>
           </div>
           <img
@@ -153,7 +153,7 @@ const ProjectPage = () => {
                 {data.framework}
               </h3>
               <div
-                className={`${textClasses} md:text-right flex justify-start md:justify-end gap-3`}
+                className={`${textClasses} md:text-right flex flex-wrap justify-start md:justify-end gap-3`}
               >
                 Tech used:
                 {data.techUsed.map((item: any, idx: number) => {
@@ -172,7 +172,7 @@ const ProjectPage = () => {
   );
 };
 
-const headingClasses = `text-3xl font-qaligo leading-loose`;
+const headingClasses = `text-lg md:text-3xl font-qaligo leading-loose`;
 const sectionClasses = `flex flex-col gap-8`;
 const textClasses = `font-wavenhaussemibold text-2xl leading-relaxed  w-full md:w-2/3 `;
 
