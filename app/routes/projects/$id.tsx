@@ -1,7 +1,8 @@
 import type { LoaderFunction } from '@remix-run/node';
 import { json } from '@remix-run/node';
-import { useLoaderData } from '@remix-run/react';
+import { Link, useLoaderData } from '@remix-run/react';
 import Container from '~/components/Container';
+import Header from '~/components/Header';
 // import Header from '~/components/Header';
 
 const b = {
@@ -98,8 +99,15 @@ const ProjectPage = () => {
 
   return (
     <main className='bg-background  flex flex-col pt-8 sm:pt-16 pb-60 px-2 sm:px-4 md:px-12'>
-      {/* <Header /> */}
       <Container>
+        <div>
+          <Link
+            to='/'
+            className='text-xl font-wavenhaussemibold text-secondary'
+          >
+            Go back
+          </Link>
+        </div>
         <div className='w-full flex flex-col gap-16 md:gap-32 justify-center items-center'>
           <div className='text-lg sm:text-3xl md:text-5xl font-qaligo leading-relaxed  sm:leading-loose  md:leading-loose md:mt-32 text-secondary flex gap-4  flex-col'>
             <h2>Detailed look into the app</h2>
@@ -146,10 +154,18 @@ const ProjectPage = () => {
                 Framework used:
                 {data.framework}
               </h3>
-              <h3 className={`${textClasses} md:text-right`}>
+              <div
+                className={`${textClasses} md:text-right flex justify-start md:justify-end gap-3`}
+              >
                 Tech used:
-                {data.techUsed}
-              </h3>
+                {data.techUsed.map((item: any, idx: number) => {
+                  return (
+                    <h3 key={idx} className='text-primary'>
+                      {item}
+                    </h3>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

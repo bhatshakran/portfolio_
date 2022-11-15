@@ -1,5 +1,6 @@
 import React from 'react';
 import gsap from 'gsap';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [showMenu, setShowMenu] = React.useState(false);
@@ -128,18 +129,26 @@ const Header = () => {
               <li>
                 <a href='/'>home</a>
               </li>
-              <li>
+              {/* <li>
                 <a href='#projects'>projects</a>
               </li>
-              <li>about</li>
-              <li>blog</li>
+              <li>about</li> */}
+              <li>
+                <Link to='/blog'>blog</Link>
+              </li>
             </ul>
           </div>
           <div className='right-pane bg-pink-100 w-full md:w-1/2 h-1/2 md:h-full flex items-center'>
             <ul className='flex flex-col items-center w-full text-lg md:text-3xl gap-y-4 md:gap-y-24 font-qaligo'>
-              <li>github</li>
-              <li>twitter</li>
-              <li>instagram</li>
+              <li>
+                <a href='https://github.com/bhatshakran/'>github</a>
+              </li>
+              <li>
+                <a href='https://twitter.com/__shaqran/'>twitter</a>
+              </li>
+              <li>
+                <a href='https://instagram.com/shaqran_bhat/'>instagram</a>
+              </li>
             </ul>
           </div>
 
