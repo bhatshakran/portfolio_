@@ -90,7 +90,7 @@ export default function App() {
     };
   }, []);
   return (
-    <html lang='en' className='debug-screens'>
+    <html lang='en'>
       <head>
         <Meta />
         <Links />
