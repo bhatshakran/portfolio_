@@ -30,7 +30,7 @@ const a = {
   techUsed: ['graphql', 'remix.run', 'prisma'],
   about:
     'Ottelo is a hotel booking application website. Here you can book amazing suites, cottages and apartments in the top cities of the world like Dubai, London, Los Angeles, Toronto.The UI is very eloquent and the app is very easy to use.',
-  url: 'https://chatterweb.netlify.app/',
+  url: 'https://ottelo.herokuapp.com/',
 };
 const c = {
   imgs: [
