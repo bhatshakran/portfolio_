@@ -2,8 +2,6 @@ import type { LoaderFunction } from '@remix-run/node';
 import { json } from '@remix-run/node';
 import { Link, useLoaderData } from '@remix-run/react';
 import Container from '~/components/Container';
-import Header from '~/components/Header';
-// import Header from '~/components/Header';
 
 const b = {
   imgs: [
