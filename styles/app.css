@@ -89,7 +89,7 @@
     transform: translate(0, -250%);
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 400px) {
     .cursor {
       position: fixed;
       background-color: #fff;
@@ -118,6 +118,9 @@
       z-index: 10000;
       transform: scale(1);
     }
+  }
+
+  @media only screen and (min-width: 768px) {
     .panels-container {
       display: grid;
       grid-template-rows: 130px 130px 130px 130px 130px 130px 130px 130px 130px;
@@ -128,7 +131,6 @@
       grid-row-start: 7 !important;
     }
   }
-
   .no-color {
     color: #a74036;
     -webkit-text-fill-color: transparent;
