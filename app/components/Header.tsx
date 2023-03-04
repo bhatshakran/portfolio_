@@ -146,7 +146,7 @@ const Header = () => {
           </div>
 
           <div
-            className='close absolute top-4 right-8 z-30 text-3xl cursor-pointer'
+            className='close absolute top-4 right-8 z-30 text-3xl cursor-pointer text-white md:text-black'
             onClick={closeMenu}
           >
             x

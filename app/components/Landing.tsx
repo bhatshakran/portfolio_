@@ -211,7 +211,7 @@ export const Landing = () => {
             <p>Welcome.</p>
           </div>
         </div>
-        <div className=' main-image w-full h-32 sm:w-80 sm:h-80  absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 '></div>
+        <div className=' main-image w-full h-32 sm:w-80 sm:h-80  absolute  sm:top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 '></div>
       </Container>
     </section>
   );
