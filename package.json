@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@remix-run/node": "^1.7.1",
-    "@remix-run/react": "^1.7.1",
+    "@remix-run/react": "1.6.8",
     "@remix-run/serve": "^1.7.1",
     "gsap": "^3.11.1",
     "mailslurp-client": "^15.14.1",

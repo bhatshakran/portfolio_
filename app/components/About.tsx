@@ -7,44 +7,35 @@ const About = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   React.useEffect(() => {
-    //   gsap.from('.brush', {
-    //     y: -3,
-    //     x: -3,
-    //     duration: 0.7,
-    //     yoyo: true,
-    //     repeat: -1,
-    //     ease: 'power4.easeInOut',
-    //   });
-
-    //   gsap.from('.dot', {
-    //     scale: 0.9,
-    //     yoyo: true,
-    //     repeat: -1,
-    //     duration: 0.6,
-    //     ease: 'expo.easeInOut',
-    //   });
-
-    const header = document.querySelector('.about-section-header');
+    // const header = document.querySelector('.about-section-header');
     const experCntr = document.querySelector('.experience');
+    // const headings = document.querySelector('.heading');
     const aboutCntr = document.querySelector('.about-container');
-    const about = document.querySelectorAll('.about-reveal');
+    // const about = document.querySelectorAll('.about-reveal');
     const exper = document.querySelectorAll('.exper-reveal');
     const aboutMe = document.querySelector('.about-me');
     let aboutLine = document.querySelector('.about-line');
     let experLine = document.querySelector('.exper-line');
 
-    const aboutTl = gsap.timeline({
+    /*  const aboutTl = gsap.timeline({
       scrollTrigger: {
         trigger: header,
         start: 'top 80%',
       },
-    });
+    }); */
+    /* aboutTl.from(headings, {
+      y: -200,
+      opacity: 0,
+      stagger: 0.2,
+      duration: 0.5,
+      ease: 'power2',
+    }); */
 
-    aboutTl.to(about, {
+    /*  aboutTl.to(about, {
       y: '0%',
       duration: 0.4,
       stagger: 0.2,
-    });
+    }); */
 
     let tl2 = gsap.timeline({
       scrollTrigger: {
@@ -122,46 +113,46 @@ const About = () => {
 
             <div className='absolute -top-12 right-0'></div>
           </div>
-          <div className='flex flex-col items-center  font-qaligo text-4xl  about-section-header '>
-            <div className=' text-4xl md:text-6xl   about-section-name w-full no-color px-2 py-8'>
-              <span className='about-reveal'>about:</span>
+          <div className='flex flex-col items-center  font-wavenhausbold text-4xl  about-section-header gap-y-4'>
+            <div className=' text-4xl md:text-6xl   about-section-name w-full no-color px-2 '>
+              <span className='headings about-reveal'>about:</span>
             </div>
-            <div className=' text-4xl md:text-6xl   about-section-name w-full text-secondary px-2 py-8'>
-              <span className='about-reveal'>
+            <div className=' text-4xl md:text-6xl   about-section-name w-full text-secondary px-2 '>
+              <span className='headings about-reveal'>
                 ab<span className=' text-primary'>o</span>ut:
               </span>
             </div>
-            <div className=' text-4xl md:text-6xl   about-section-name w-full no-color px-2 py-8'>
-              <span className='about-reveal'>about:</span>
+            <div className=' text-4xl md:text-6xl   about-section-name w-full no-color px-2 '>
+              <span className='headings about-reveal'>about:</span>
             </div>
           </div>
           <div className=' about-line w-full h-1 bg-primary '></div>
 
           <div className='details flex flex-wrap gap-12 mt-20 z-10 text-secondary'>
-            <div className='about-container text-xl font-wavenhaussemibold w-full  md:w-2/3 overflow-hidden   '>
-              <p className='about-me inline-block'>
-                Hi, I am Shaqran Bhat from Kashmir, India. I am a fullstack
-                developer but frontend is my primary concern. My tech stack used
-                to be MERNG (MongoDB, Express, React, Nodejs, GraphQL) but with
-                the advent of fullstack frameworks like Nextjs and Remix , I
-                have switched over to these awesome frameworks because of the
-                ease and efficiency they offer. My goal is to help people/brands
-                develop clean, efficient and mobile first UI's. Also I love
-                animations and WebGL because of the flavour they bring to the
-                web! I use GSAP & locomotive scroll for animations.
+            <div className='about-container text-xl font-helvetica font-light  w-full  md:w-2/3 overflow-hidden   '>
+              <p className='about-me inline-block opacity-50'>
+                Hi, I am Shaqran Bhat from India. I am a fullstack developer but
+                frontend is my primary concern. My tech stack used to be MERNG
+                (MongoDB, Express, React, Nodejs, GraphQL) but with the advent
+                of fullstack frameworks like Nextjs and Remix , I have switched
+                over to these awesome frameworks because of the ease and
+                efficiency they offer. My goal is to help people/brands develop
+                clean, efficient and mobile first UI's. Also I love animations
+                and WebGL because of the flavour they bring to the web! I use
+                GSAP & locomotive scroll for animations.
               </p>
             </div>
             <div className='experience w-full mt-28'>
-              <div className=' flex flex-col gap-0  items-end'>
-                <h1 className='text-2xl  experience-section-name sm:text-4xl  md:text-6xl no-color py-4 sm:py-8'>
+              <div className=' flex flex-col gap-0  items-end font-wavenhausbold gap-y-4'>
+                <h1 className='text-2xl  experience-section-name sm:text-4xl  md:text-6xl no-color  '>
                   <span className='exper-reveal'>experience:</span>
                 </h1>
-                <h1 className='text-2xl  experience-section-name sm:text-4xl md:text-6xl   py-4 sm:py-8 '>
+                <h1 className='text-2xl  experience-section-name sm:text-4xl md:text-6xl     '>
                   <span className='exper-reveal'>
                     e<span className=' text-primary'>x</span>perience:
                   </span>
                 </h1>
-                <h1 className='text-2xl   experience-section-name sm:text-4xl md:text-6xl no-color py-4 sm:py-8'>
+                <h1 className='text-2xl   experience-section-name sm:text-4xl md:text-6xl no-color  '>
                   <span className='exper-reveal'>experience:</span>
                 </h1>
                 <div className=' exper-line w-full h-1 bg-primary mt-8 sm:mt-16'></div>
@@ -176,7 +167,7 @@ const About = () => {
                     <h4 className='text-xl font-wavenhaussemibold '>
                       About the company :
                     </h4>
-                    <p className='text-xl font-wavenhaussemibold opacity-70'>
+                    <p className='text-xl font-helvetica font-light opacity-50 mt-4'>
                       They are a platform that allow people to enjoy music
                       concerts from their mobile phones without actually going
                       to the concert in person.You could also have a virtual
@@ -185,7 +176,7 @@ const About = () => {
                     <h4 className=' mt-6 text-xl font-wavenhaussemibold '>
                       What i worked on :
                     </h4>
-                    <p className='text-xl font-wavenhaussemibold opacity-70'>
+                    <p className='text-xl font-helvetica font-light opacity-50 mt-4'>
                       I worked on the team responsible for developing the
                       frontend side of the platform. We used Nextjs, Strapi(CMS)
                       and Postgres to build the application.{' '}
@@ -193,7 +184,7 @@ const About = () => {
                     <h4 className='text-xl font-wavenhaussemibold mt-6'>
                       Duration :
                     </h4>
-                    <p className='text-xl font-wavenhaussemibold opacity-70'>
+                    <p className='text-xl font-wavenhaussemibold opacity-50'>
                       3 months.
                     </p>
                   </div>
@@ -206,7 +197,7 @@ const About = () => {
                     <h4 className='text-xl font-wavenhaussemibold '>
                       About the company :
                     </h4>
-                    <p className='text-xl font-wavenhaussemibold opacity-70'>
+                    <p className='text-xl font-helvetica font-light opacity-50 mt-4'>
                       Zivaka LLP is an IT Delivery and Consultancy startup. They
                       offer solutions all the way from Concept to Product
                       Release.
@@ -214,7 +205,7 @@ const About = () => {
                     <h4 className=' mt-6 text-xl font-wavenhaussemibold '>
                       What i worked on :
                     </h4>
-                    <p className='text-xl font-wavenhaussemibold opacity-70'>
+                    <p className='text-xl font-helvetica font-light opacity-50 mt-4'>
                       I worked solo to build a website for a construction
                       company. I used plain HTML, CSS and vanilla js to develop
                       the whole site.
@@ -222,7 +213,7 @@ const About = () => {
                     <h4 className='text-xl font-wavenhaussemibold mt-6'>
                       Duration :
                     </h4>
-                    <p className='text-xl font-wavenhaussemibold opacity-70'>
+                    <p className='text-xl font-wavenhaussemibold opacity-50'>
                       1.5 months.
                     </p>
                   </div>

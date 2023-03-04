@@ -35,9 +35,9 @@ const Projects = () => {
       },
     });
 
-    tl2.from(line, {
-      width: 0,
-      opacity: 0,
+    tl2.to(line, {
+      width: '100%',
+      opacity: 1,
       duration: 1,
       ease: 'power2.easeIn',
     });
@@ -74,32 +74,14 @@ const Projects = () => {
     });
   }, []);
 
-  // project hover animation
-  const hoverAnimation = (e: React.SyntheticEvent<HTMLDivElement>) => {
-    /* const activeEl = (e.target as HTMLDivElement).children[0];
-    const tl = gsap.timeline();
-    tl.to(activeEl, {
-      scale: 1.1,
-      filter: 'blur(1px)',
-      duration: 0.1,
-    }); */
-  };
-  const leaveAnimation = (e: React.SyntheticEvent<HTMLDivElement>) => {
-    /*  const activeEl = (e.target as HTMLDivElement).children[0];
-    gsap.to(activeEl, {
-      filter: 'blur(0px)',
-      scale: 1,
-    }); */
-  };
-
   return (
     <section
       id='el'
       // data-scroll-section
-      className='projects bg-background  leading-loose   font-qaligo text-primary flex flex-col items-end p-4 md:p-16 mt-28  lg:mt-60'
+      className='projects bg-background  leading-loose   font-qaligo text-primary flex flex-col items-end p-4 md:p-16 mt-20  lg:mt-12'
     >
-      <div className='proj-section-a flex items-center gap-4 font-qaligo text-4xl text-secondary '>
-        <div className=' projects-heading flex flex-col items-end gap-y-16'>
+      <div className='proj-section-a flex items-center gap-4 font-wavenhausbold text-4xl text-secondary '>
+        <div className=' projects-heading flex flex-col items-end gap-y-4'>
           <h2 className='text-4xl md:text-6xl no-color heading'>projects:</h2>
           <h2 className='text-4xl md:text-6xl heading'>
             pr<span className='text-primary'>o</span>jects:
@@ -109,32 +91,28 @@ const Projects = () => {
       </div>
       <div className=' project-line w-full h-1 bg-primary mt-16'></div>
       <div
-        className='w-full proj-section panels-container mt-40 flex flex-col items-start gap-y-24 md:grid md:grid-cols-2
+        className='w-full proj-section panels-container mt-40 flex flex-col items-center gap-y-24 md:grid md:grid-cols-2
          text-secondary '
       >
         <div className='panel panel-1 w-full   overflow-hidden md:row-span-3  '>
           <div className='inside-panel mt-6 gap-6  w-full flex flex-col items-center    '>
-            <div className='title-section  flex  w-full  items-start gap-x-3 justify-center '>
+            <div className='title-section  flex  w-full  items-center gap-x-3 justify-center '>
               <div className='info font-wavenhaussemibold text-sm opacity-60'>
                 (01)
               </div>
-              <div className='name text-lg md:text-3xl  text-primary'>
+              <div className='name text-lg md:text-3xl  text-primary font-wavenhausbold'>
                 Ottelo
               </div>
               <div className='type font-wavenhaussemibold text-xs opacity-60'>
                 hotel booking website
               </div>
             </div>
-            <div
-              className='proj-img  proj-a  overflow-hidden w-96  flex justify-center rounded-3xl h-52'
-              onMouseEnter={(e) => hoverAnimation(e)}
-              onMouseLeave={(e) => leaveAnimation(e)}
-            >
+            <div className='proj-img  proj-a  overflow-hidden w-96  flex justify-center  h-52'>
               <img
                 /* data-scroll */
                 src='/projects/a/a.png'
                 alt=''
-                className='w-auto object-contain h-full projthumb rounded-3xl'
+                className='w-auto object-contain h-full projthumb '
               />
             </div>
             <div className='bg-secondary flex items-start  text-sm font-wavenhaussemibold opacity-60 cursor-pointer text-white'>
@@ -145,27 +123,23 @@ const Projects = () => {
 
         <div className='panel panel-2  w-full overflow-hidden  md:row-span-3 md:row-start-3 md:col-start-2'>
           <div className='inside-panel mt-6 gap-6  w-full flex flex-col items-center  justify-center  '>
-            <div className='title-section flex  w-full h-auto items-start gap-x-3 justify-center '>
+            <div className='title-section flex  w-full h-auto items-center gap-x-3 justify-center '>
               <div className='info font-wavenhaussemibold text-sm opacity-60'>
                 (02)
               </div>
-              <div className='name text-lg md:text-3xl  text-primary'>
+              <div className='name text-lg md:text-3xl  text-primary font-wavenhausbold'>
                 Chatter
               </div>
               <div className='type font-wavenhaussemibold text-xs opacity-60'>
                 chat application
               </div>
             </div>
-            <div
-              className='proj-img  proj-b overflow-hidden w-96 h-52 flex justify-center rounded-3xl'
-              onMouseOver={(e) => hoverAnimation(e)}
-              onMouseLeave={(e) => leaveAnimation(e)}
-            >
+            <div className='proj-img  proj-b overflow-hidden w-96 h-52 flex justify-center '>
               <img
                 /* data-scroll */
                 src='/projects/b/b.png'
                 alt=''
-                className=' w-auto h-full object-contain projthumb rounded-3xl'
+                className=' w-auto h-full object-contain projthumb '
               />
             </div>
             <div className='bg-secondary flex items-start  text-sm font-wavenhaussemibold opacity-60 cursor-pointer text-white'>
@@ -176,27 +150,23 @@ const Projects = () => {
 
         <div className='panel panel-3  w-full overflow-hidden  md:row-span-3  md:col-start-1  md:row-start-5'>
           <div className='inside-panel mt-6 gap-6 w-full flex flex-col items-center  justify-center  '>
-            <div className='title-section flex  w-full h-auto items-start gap-x-3 justify-center '>
+            <div className='title-section flex  w-full h-auto items-center gap-x-3 justify-center '>
               <div className='info font-wavenhaussemibold text-sm opacity-60'>
                 (03)
               </div>
-              <div className='name text-lg md:text-3xl opacity-90  text-primary'>
+              <div className='name text-lg md:text-3xl opacity-90  text-primary font-wavenhausbold'>
                 JD
               </div>
               <div className='type font-wavenhaussemibold text-xs opacity-60'>
                 design agency site
               </div>
             </div>
-            <div
-              className='proj-img  proj-c  overflow-hidden w-96 h-52 flex justify-center rounded-3xl'
-              onMouseOver={(e) => hoverAnimation(e)}
-              onMouseLeave={(e) => leaveAnimation(e)}
-            >
+            <div className='proj-img  proj-c  overflow-hidden w-96 h-52 flex justify-center '>
               <img
                 /* data-scroll */
                 src='/projects/c/c.png'
                 alt=''
-                className=' w-auto object-contain h-full projthumb rounded-3xl'
+                className=' w-auto object-contain h-full projthumb '
               />
             </div>
             <div className='bg-secondary flex items-start  text-sm font-wavenhaussemibold opacity-60 cursor-pointer text-white'>
@@ -206,27 +176,23 @@ const Projects = () => {
         </div>
         <div className='panel panel-4 w-full overflow-hidden md:row-span-3 md:col-start-2'>
           <div className='inside-panel mt-6 gap-6 w-full flex flex-col items-center  justify-center  '>
-            <div className='title-section flex  w-full h-auto items-start gap-x-3 justify-center '>
+            <div className='title-section flex  w-full h-auto items-center gap-x-3 justify-center '>
               <div className='info font-wavenhaussemibold text-sm opacity-60'>
                 (04)
               </div>
-              <div className='name text-lg md:text-3xl text-primary leading-loose'>
+              <div className='name text-lg md:text-3xl text-primary  font-wavenhausbold'>
                 Ski Store
               </div>
               <div className='type font-wavenhaussemibold text-xs opacity-60'>
                 ecommerce app
               </div>
             </div>
-            <div
-              className='proj-img  proj-d  overflow-hidden w-96 h-52 flex justify-center rounded-3xl '
-              onMouseOver={(e) => hoverAnimation(e)}
-              onMouseLeave={(e) => leaveAnimation(e)}
-            >
+            <div className='proj-img  proj-d  overflow-hidden w-96 h-52 flex justify-center  '>
               <img
                 /* data-scroll */
                 src='/projects/d/d.png'
                 alt=''
-                className=' w-auto object-contain h-full projthumb rounded-3xl'
+                className=' w-auto object-contain h-full projthumb '
               />
             </div>
             <div className='bg-secondary flex items-start  text-sm font-wavenhaussemibold opacity-60 cursor-pointer text-white'>

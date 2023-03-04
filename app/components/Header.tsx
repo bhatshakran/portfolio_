@@ -102,21 +102,17 @@ const Header = () => {
   };
   return (
     <>
-      <div className='header  overflow-hidden text-primary ml-8 mt-8 flex justify-between '>
+      <div className='header  overflow-hidden text-primary ml-8 mt-12 flex justify-between '>
         <div className='details font-wavenhausbold'>
           <div>
             <h4>shaqran</h4>
           </div>
           <div className='hidden md:flex md:flex-col ml-10 mt-3 font-wavenhaussemibold'>
             <h4>web developer</h4>
-            <h4>kashmir, india</h4>
           </div>
         </div>
         <div className='site-menu mr-10 font-wavenhausbold'>
-          <button
-            onClick={displayMenu}
-            className='hover:text-white hover:line-through '
-          >
+          <button onClick={displayMenu} className=' hover:line-through '>
             menu
           </button>
         </div>
@@ -129,10 +125,7 @@ const Header = () => {
               <li>
                 <a href='/'>home</a>
               </li>
-              {/* <li>
-                <a href='#projects'>projects</a>
-              </li>
-              <li>about</li> */}
+
               <li>
                 <Link to='/blog'>blog</Link>
               </li>

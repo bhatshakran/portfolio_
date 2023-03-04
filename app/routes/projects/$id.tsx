@@ -107,7 +107,7 @@ const ProjectPage = () => {
           </Link>
         </div>
         <div className='w-full  flex flex-col gap-16 md:gap-32 items-start justify-center md:items-center'>
-          <div className='w-full text-lg sm:text-3xl md:text-5xl font-qaligo leading-relaxed mt-8  sm:leading-loose  md:leading-loose md:mt-32 text-secondary flex gap-4  flex-col '>
+          <div className='w-full text-lg sm:text-3xl md:text-5xl font-wavenhausbold leading-relaxed mt-8  sm:leading-loose  md:leading-loose md:mt-32 text-secondary flex gap-4  flex-col '>
             <h2 className='w-full h-auto'>Detailed look into the app</h2>
             <h2 className='text-primary '>{data.title}</h2>
           </div>
@@ -172,8 +172,8 @@ const ProjectPage = () => {
   );
 };
 
-const headingClasses = `text-lg md:text-3xl font-qaligo leading-loose`;
+const headingClasses = `text-lg md:text-3xl font-wavenhausbold leading-loose`;
 const sectionClasses = `flex flex-col gap-8`;
-const textClasses = `font-wavenhaussemibold text-2xl leading-relaxed  w-full md:w-2/3 `;
+const textClasses = `font-helvetica font-light text-2xl leading-relaxed  w-full md:w-2/3 opacity-50`;
 
 export default ProjectPage;

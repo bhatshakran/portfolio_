@@ -18,11 +18,12 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#A74036',
-        secondary: '#4A4036',
-        background: '#EDDCC8',
+        primary: 'black',
+        secondary: 'black',
+        background: 'white',
       },
       fontFamily: {
+        helvetica: ['helvetica'],
         qaligo: ['Qaligo', 'sans-serif'],
         sunflower: ['Sunflower', 'sans-serif'],
         wavenhausbold: ['Wavenhaus Bold', 'mono'],
