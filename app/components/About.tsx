@@ -144,15 +144,15 @@ const About = () => {
             </div>
             <div className='experience w-full mt-28'>
               <div className=' flex flex-col gap-0  items-end font-wavenhausbold gap-y-4'>
-                <h1 className='text-2xl  experience-section-name sm:text-4xl  md:text-6xl no-color  '>
+                <h1 className='text-4xl   experience-section-name   md:text-6xl no-color  '>
                   <span className='exper-reveal'>experience:</span>
                 </h1>
-                <h1 className='text-2xl  experience-section-name sm:text-4xl md:text-6xl     '>
+                <h1 className='text-4xl   experience-section-name  md:text-6xl     '>
                   <span className='exper-reveal'>
                     e<span className=' text-primary'>x</span>perience:
                   </span>
                 </h1>
-                <h1 className='text-2xl   experience-section-name sm:text-4xl md:text-6xl no-color  '>
+                <h1 className='text-4xl    experience-section-name  md:text-6xl no-color  '>
                   <span className='exper-reveal'>experience:</span>
                 </h1>
                 <div className=' exper-line w-full h-1 bg-primary mt-8 sm:mt-16'></div>
