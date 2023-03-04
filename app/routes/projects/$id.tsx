@@ -128,7 +128,7 @@ const ProjectPage = () => {
 
           <div className={sectionClasses}>
             <h2 className={headingClasses}>More images</h2>
-            <div className='flex flex-wrap  gap-6'>
+            <div className='flex flex-wrap justify-center gap-10'>
               {data.imgs.map((el: string, idx: number) => {
                 if (idx !== 0) {
                   console.log(idx);
@@ -137,7 +137,7 @@ const ProjectPage = () => {
                       src={el}
                       alt='moreimages'
                       key={idx}
-                      className='w-full md:w-1/2'
+                      className='w-96 '
                     />
                   );
                 } else return null;
@@ -172,8 +172,8 @@ const ProjectPage = () => {
   );
 };
 
-const headingClasses = `text-lg md:text-3xl font-wavenhausbold leading-loose`;
-const sectionClasses = `flex flex-col gap-8`;
-const textClasses = `font-helvetica font-light text-2xl leading-relaxed  w-full md:w-2/3 opacity-50`;
+const headingClasses = `text-lg sm:text-2xl md:text-3xl font-wavenhausbold leading-loose`;
+const sectionClasses = `flex flex-col gap-2 sm:gap-6`;
+const textClasses = `font-helvetica font-light text-sm sm:text-lg md:text-xl leading-relaxed  w-full md:w-2/3 opacity-50`;
 
 export default ProjectPage;
