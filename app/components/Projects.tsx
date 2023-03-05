@@ -78,7 +78,7 @@ const Projects = () => {
     <section
       id='el'
       // data-scroll-section
-      className='projects bg-background  leading-loose   font-qaligo text-primary flex flex-col items-end p-4 md:p-16 mt-20  lg:mt-12'
+      className='projects bg-background  leading-loose   font-qaligo text-primary flex flex-col items-end p-4 md:p-16 mt-8  lg:mt-12'
     >
       <div className='proj-section-a flex items-center gap-4 font-wavenhausbold text-4xl text-secondary '>
         <div className=' projects-heading flex flex-col items-end gap-y-4'>

@@ -120,8 +120,8 @@ const Header = () => {
 
       {showMenu && (
         <div className='fullscreen-menu bg-white h-screen w-screen absolute top-0 left-0 z-20 flex flex-wrap '>
-          <div className='left-pane  bg-primary w-full md:w-1/2 h-1/2 md:h-full flex items-center text-white'>
-            <ul className='flex flex-col items-center w-full text-lg md:text-3xl gap-y-4 md:gap-y-24 font-qaligo'>
+          <div className='left-pane  bg-blue-300 w-full md:w-1/2 h-1/2 md:h-full flex items-center text-white'>
+            <ul className='flex flex-col items-center w-full text-lg md:text-3xl gap-y-4 md:gap-y-12 font-wavenhausbold'>
               <li>
                 <a href='/'>home</a>
               </li>
@@ -132,7 +132,7 @@ const Header = () => {
             </ul>
           </div>
           <div className='right-pane bg-pink-100 w-full md:w-1/2 h-1/2 md:h-full flex items-center'>
-            <ul className='flex flex-col items-center w-full text-lg md:text-3xl gap-y-4 md:gap-y-24 font-qaligo'>
+            <ul className='flex flex-col items-center w-full text-lg md:text-3xl gap-y-4 md:gap-y-12 font-wavenhausbold'>
               <li>
                 <a href='https://github.com/bhatshakran/'>github</a>
               </li>
