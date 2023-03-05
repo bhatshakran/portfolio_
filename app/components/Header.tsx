@@ -102,7 +102,7 @@ const Header = () => {
   };
   return (
     <>
-      <div className='header  overflow-hidden text-primary ml-8 mt-12 flex justify-between '>
+      <div className='header  overflow-hidden text-primary ml-8 mt-8 flex justify-between '>
         <div className='details font-wavenhausbold'>
           <div>
             <h4>shaqran</h4>

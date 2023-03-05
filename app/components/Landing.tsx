@@ -75,6 +75,7 @@ export const Landing = () => {
           },
           '<='
         );
+        // tl1.to('.img-container', { visibility: 'hidden', display: 'none' });
         tl1.fromTo(
           '.main-image',
           {
@@ -163,7 +164,7 @@ export const Landing = () => {
         <Header />
         {/* image and text here */}
         <div className='overlay bg-background'></div>
-        <div className=' txt-container relative  mt-60  sm:mt-40  z-10 '>
+        <div className=' txt-container mt-32     z-10 '>
           <div className='text-wrapper font-wavenhausbold w-full text-secondary  text-3xl sm:text-5xl md:text-6xl    text-center flex gap-4 sm:gap-y-16 flex-wrap justify-center '>
             <div className='flex '>
               <div className='letter'>T</div>
@@ -171,6 +172,7 @@ export const Landing = () => {
               <div className='letter'>i</div>
               <div className='letter'>s</div>
             </div>
+
             <div className='flex '>
               <div className='letter'>i</div>
               <div className='letter'>s</div>
@@ -211,8 +213,10 @@ export const Landing = () => {
             <p>Welcome.</p>
           </div>
         </div>
-        <div className=' main-image w-full h-32 sm:w-80 sm:h-80  absolute   sm:top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 '></div>
+        <div className=' main-image w-full h-32 absolute   sm:top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:w-80 sm:h-80 '></div>
       </Container>
     </section>
   );
 };
+
+//
