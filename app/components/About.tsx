@@ -7,22 +7,22 @@ const About = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   React.useEffect(() => {
-    // const header = document.querySelector('.about-section-header');
+    const header = document.querySelector('.about-section-header');
     const experCntr = document.querySelector('.experience');
     // const headings = document.querySelector('.heading');
     const aboutCntr = document.querySelector('.about-container');
-    // const about = document.querySelectorAll('.about-reveal');
+    const about = document.querySelectorAll('.about-reveal');
     const exper = document.querySelectorAll('.exper-reveal');
     const aboutMe = document.querySelector('.about-me');
     let aboutLine = document.querySelector('.about-line');
     let experLine = document.querySelector('.exper-line');
 
-    /*  const aboutTl = gsap.timeline({
+    const aboutTl = gsap.timeline({
       scrollTrigger: {
         trigger: header,
         start: 'top 80%',
       },
-    }); */
+    });
     /* aboutTl.from(headings, {
       y: -200,
       opacity: 0,
@@ -31,11 +31,13 @@ const About = () => {
       ease: 'power2',
     }); */
 
-    /*  aboutTl.to(about, {
-      y: '0%',
-      duration: 0.4,
+    aboutTl.from(about, {
+      y: -200,
+      opacity: 0,
       stagger: 0.2,
-    }); */
+      duration: 0.5,
+      ease: 'power2',
+    });
 
     let tl2 = gsap.timeline({
       scrollTrigger: {
@@ -83,10 +85,12 @@ const About = () => {
       },
     });
 
-    experTl.to(exper, {
-      y: '0%',
-      duration: 0.4,
+    experTl.from(exper, {
+      y: -200,
+      opacity: 0,
       stagger: 0.2,
+      duration: 0.5,
+      ease: 'power2',
     });
 
     const pastTl = gsap.timeline({
