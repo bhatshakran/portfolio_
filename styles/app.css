@@ -72,13 +72,10 @@
   .text-wrapper,
   .header,
   .lineSvg,
-  .fullscreen-menu,
-  .scroll {
+  .fullscreen-menu {
     visibility: hidden;
   }
-  .scroll {
-    color: white;
-  }
+
   .about-section-name,
   .experience-section-name {
     overflow: hidden;

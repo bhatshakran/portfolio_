@@ -128,6 +128,19 @@ export const Landing = () => {
           ease: 'power2.easeInOut',
           stagger: 0.05,
         });
+        tl1.from('.scroll', {
+          opacity: 0,
+          duration: 2,
+          ease: 'power2.easeInOut',
+        });
+
+        tl1.to('.scroll', {
+          opacity: 0,
+          duration: 1,
+          yoyo: true,
+          repeat: -1,
+          ease: 'power2.easeInOut',
+        });
 
         return () => {};
       }
@@ -214,6 +227,10 @@ export const Landing = () => {
           </div>
         </div>
         <div className=' main-image w-full h-32 absolute   sm:top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:w-80 sm:h-80 '></div>
+
+        <div className='scroll sm:hidden absolute bottom-20 left-1/2 -translate-x-1/2 font-wavenhausbold tracking-wide'>
+          Scroll ↓
+        </div>
       </Container>
     </section>
   );

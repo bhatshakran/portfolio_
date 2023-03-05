@@ -47,7 +47,7 @@ const About = () => {
     tl2.from(aboutLine, {
       width: 0,
       opacity: 0,
-      duration: 1,
+      duration: 1.5,
       ease: 'power2.easeIn',
     });
     let tl3 = gsap.timeline({
@@ -60,7 +60,7 @@ const About = () => {
     tl3.from(experLine, {
       width: 0,
       opacity: 0,
-      duration: 1,
+      duration: 1.5,
       ease: 'power2.easeIn',
     });
 
@@ -130,7 +130,7 @@ const About = () => {
 
           <div className='details flex flex-wrap gap-12 mt-20 z-10 text-secondary'>
             <div className='about-container text-xl font-helvetica font-light  w-full  md:w-2/3 overflow-hidden   '>
-              <p className='about-me inline-block opacity-50'>
+              <p className='about-me text-sm sm:text-lg inline-block opacity-50'>
                 Hi, I am Shaqran Bhat from India. I am a fullstack developer but
                 frontend is my primary concern. My tech stack used to be MERNG
                 (MongoDB, Express, React, Nodejs, GraphQL) but with the advent
@@ -167,7 +167,7 @@ const About = () => {
                     <h4 className='text-xl font-wavenhaussemibold '>
                       About the company :
                     </h4>
-                    <p className='text-xl font-helvetica font-light opacity-50 mt-4'>
+                    <p className='text-sm sm:text-xl font-helvetica font-light opacity-50 mt-4'>
                       They are a platform that allow people to enjoy music
                       concerts from their mobile phones without actually going
                       to the concert in person.You could also have a virtual
@@ -176,7 +176,7 @@ const About = () => {
                     <h4 className=' mt-6 text-xl font-wavenhaussemibold '>
                       What i worked on :
                     </h4>
-                    <p className='text-xl font-helvetica font-light opacity-50 mt-4'>
+                    <p className='text-sm sm:text-xl font-helvetica font-light opacity-50 mt-4'>
                       I worked on the team responsible for developing the
                       frontend side of the platform. We used Nextjs, Strapi(CMS)
                       and Postgres to build the application.{' '}
@@ -184,7 +184,7 @@ const About = () => {
                     <h4 className='text-xl font-wavenhaussemibold mt-6'>
                       Duration :
                     </h4>
-                    <p className='text-xl font-wavenhaussemibold opacity-50'>
+                    <p className='text-sm sm:text-xl font-wavenhaussemibold opacity-50'>
                       3 months.
                     </p>
                   </div>
@@ -197,7 +197,7 @@ const About = () => {
                     <h4 className='text-xl font-wavenhaussemibold '>
                       About the company :
                     </h4>
-                    <p className='text-xl font-helvetica font-light opacity-50 mt-4'>
+                    <p className='text-sm sm:text-xl font-helvetica font-light opacity-50 mt-4'>
                       Zivaka LLP is an IT Delivery and Consultancy startup. They
                       offer solutions all the way from Concept to Product
                       Release.
@@ -205,7 +205,7 @@ const About = () => {
                     <h4 className=' mt-6 text-xl font-wavenhaussemibold '>
                       What i worked on :
                     </h4>
-                    <p className='text-xl font-helvetica font-light opacity-50 mt-4'>
+                    <p className='text-sm sm:text-xl font-helvetica font-light opacity-50 mt-4'>
                       I worked solo to build a website for a construction
                       company. I used plain HTML, CSS and vanilla js to develop
                       the whole site.
@@ -213,7 +213,7 @@ const About = () => {
                     <h4 className='text-xl font-wavenhaussemibold mt-6'>
                       Duration :
                     </h4>
-                    <p className='text-xl font-wavenhaussemibold opacity-50'>
+                    <p className='text-sm sm:text-xl font-wavenhaussemibold opacity-50'>
                       1.5 months.
                     </p>
                   </div>

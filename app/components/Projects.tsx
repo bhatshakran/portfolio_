@@ -35,12 +35,19 @@ const Projects = () => {
       },
     });
 
-    tl2.to(line, {
-      width: '100%',
-      opacity: 1,
-      duration: 1,
-      ease: 'power2.easeIn',
-    });
+    tl2.fromTo(
+      line,
+      {
+        width: 0,
+        opacity: 0,
+      },
+      {
+        width: '100%',
+        opacity: 1,
+        duration: 1.5,
+        ease: 'power2.easeIn',
+      }
+    );
 
     titleSection.forEach((section: any) => {
       let tl4 = gsap.timeline({

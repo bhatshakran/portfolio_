@@ -610,12 +610,8 @@ a {
   left: 50%;
 }
 
-.bottom-2\/3 {
-  bottom: 66.666667%;
-}
-
-.bottom-0 {
-  bottom: 0px;
+.bottom-20 {
+  bottom: 5rem;
 }
 
 .z-10 {
@@ -695,6 +691,10 @@ a {
   margin-top: 3rem;
 }
 
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
 .ml-8 {
   margin-left: 2rem;
 }
@@ -723,10 +723,6 @@ a {
   margin-top: 10rem;
 }
 
-.mt-60 {
-  margin-top: 15rem;
-}
-
 .inline-block {
   display: inline-block;
 }
@@ -745,10 +741,6 @@ a {
 
 .h-1 {
   height: 0.25rem;
-}
-
-.h-auto {
-  height: auto;
 }
 
 .h-screen {
@@ -773,6 +765,10 @@ a {
 
 .h-52 {
   height: 13rem;
+}
+
+.h-auto {
+  height: auto;
 }
 
 .w-full {
@@ -853,14 +849,6 @@ a {
   justify-content: space-between;
 }
 
-.justify-around {
-  justify-content: space-around;
-}
-
-.justify-evenly {
-  justify-content: space-evenly;
-}
-
 .gap-10 {
   gap: 2.5rem;
 }
@@ -873,8 +861,8 @@ a {
   gap: 0px;
 }
 
-.gap-1 {
-  gap: 0.25rem;
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .gap-4 {
@@ -895,10 +883,6 @@ a {
 
 .gap-3 {
   gap: 0.75rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
 }
 
 .gap-y-4 {
@@ -927,11 +911,6 @@ a {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-secondary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -950,6 +929,11 @@ a {
 .bg-background {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-secondary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .object-contain {
@@ -974,11 +958,6 @@ a {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
 }
 
 .pt-8 {
@@ -1023,9 +1002,19 @@ a {
   line-height: 1.75rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .text-lg {
@@ -1036,16 +1025,6 @@ a {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
 }
 
 .font-light {
@@ -1062,6 +1041,10 @@ a {
 
 .tracking-widest {
   letter-spacing: 0.1em;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
 }
 
 .text-secondary {
@@ -1127,13 +1110,8 @@ a {
 .text-wrapper,
   .header,
   .lineSvg,
-  .fullscreen-menu,
-  .scroll {
+  .fullscreen-menu {
   visibility: hidden;
-}
-
-.scroll {
-  color: white;
 }
 
 .about-section-name,
@@ -1254,8 +1232,8 @@ a {
     margin-top: 4rem;
   }
 
-  .sm\:mt-40 {
-    margin-top: 10rem;
+  .sm\:hidden {
+    display: none;
   }
 
   .sm\:h-52 {
@@ -1291,6 +1269,16 @@ a {
     padding-top: 4rem;
   }
 
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
   .sm\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -1309,11 +1297,6 @@ a {
   .sm\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
-  }
-
-  .sm\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
   }
 
   .sm\:leading-loose {
